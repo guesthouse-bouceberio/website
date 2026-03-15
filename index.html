@@ -10,6 +10,10 @@
 
 <meta name="description" content="Accogliente appartamento per vacanze a Fénis in Valle d'Aosta. Vicino al Castello di Fénis, Aosta e alle montagne più belle della regione.">
 
+<meta property="og:title" content="Appartamento Vacanze a Fénis">
+<meta property="og:description" content="Scopri il nostro appartamento nel cuore della Valle d'Aosta">
+<meta property="og:type" content="website">
+
 <style>
 
 body{
@@ -126,6 +130,27 @@ font-size:14px;
 color:#777;
 }
 
+#google_translate_element{
+margin-top:15px;
+text-align:center;
+}
+
+/* pulsante whatsapp */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:14px 18px;
+border-radius:50px;
+font-size:16px;
+text-decoration:none;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+z-index:1000;
+}
+
 </style>
 
 </head>
@@ -149,6 +174,8 @@ color:#777;
 <a href="#prenota">Prenota</a>
 
 </nav>
+
+<div id="google_translate_element"></div>
 
 </header>
 
@@ -335,18 +362,12 @@ Ristorante tipico
 <h2>Prenota il tuo soggiorno</h2>
 
 <p>
-
 Contattaci direttamente oppure prenota tramite la piattaforma che preferisci.
-
 </p>
 
-<a class="button" href="#">
-Prenota su Airbnb
-</a>
+<a class="button" href="#">Prenota su Airbnb</a>
 
-<a class="button" href="#">
-Prenota su Booking
-</a>
+<a class="button" href="#">Prenota su Booking</a>
 
 <a class="button" href="https://wa.me/391234567890">
 Contattaci su WhatsApp
@@ -364,6 +385,29 @@ Contattaci su WhatsApp
 <p>Appartamento turistico a Fénis – Valle d'Aosta</p>
 
 </footer>
+
+
+<a class="whatsapp" href="https://wa.me/391234567890">
+💬 WhatsApp
+</a>
+
+
+<script>
+
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    {
+      pageLanguage: 'it',
+      includedLanguages: 'en,fr,de,nl,zh-CN,ru,ja',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    },
+    'google_translate_element'
+  );
+}
+
+</script>
+
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 
 </body>

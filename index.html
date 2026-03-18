@@ -29,12 +29,12 @@ color:#333;
 
 header{
 background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-url(header.jpg') center/cover no-repeat;
+url('header.jpg') center/cover no-repeat;
 color:white;
-padding:60px 20px;
+padding:50px 20px;
 text-align:center;
 
-min-height:320px;
+min-height:240px;
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -205,9 +205,39 @@ box-shadow:0 4px 10px rgba(0,0,0,0.3);
 z-index:1000;
 }
 
+/* GOOGLE TRANSLATE CLEAN */
+
 #google_translate_element{
 margin-top:15px;
 text-align:center;
+}
+
+.goog-te-gadget{
+font-size:14px !important;
+color:white !important;
+}
+
+/* Nasconde logo Google */
+.goog-logo-link {
+display:none !important;
+}
+
+/* Nasconde "Powered by Google" */
+.goog-te-gadget span {
+display:none !important;
+}
+
+/* Sistema spaziatura */
+.goog-te-gadget {
+color:transparent !important;
+}
+
+/* Dropdown più bello */
+.goog-te-gadget select{
+padding:6px 10px;
+border-radius:8px;
+border:none;
+font-size:14px;
 }
 
 </style>

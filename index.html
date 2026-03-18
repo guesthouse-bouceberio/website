@@ -6,25 +6,51 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Appartamento Vacanze a Fénis – Valle d'Aosta</title>
+<title>Appartamenti Vacanze Fénis (AO)</title>
 
-<meta name="description" content="Accogliente appartamento per vacanze a Fénis in Valle d'Aosta. Vicino al Castello di Fénis, Aosta e alle montagne più belle della regione.">
+<meta name="description" content="Accoglienti appartamenti indipendenti per vacanze a Fénis in Valle d'Aosta. Vicino al Castello di Fénis, Aosta e alle montagne più belle della regione.">
+
+<meta property="og:title" content="Appartamento Vacanze a Fénis">
+<meta property="og:description" content="Scopri i nostri appartamenti nel cuore della Valle d'Aosta">
+<meta property="og:type" content="website">
 
 <style>
+
+/* BASE */
 
 body{
 font-family:Arial,Helvetica,sans-serif;
 margin:0;
-background:#f4f6f8;
+background:#f7f5f2;
 color:#333;
 }
 
+/* HEADER */
+
 header{
-background:#1f2f3f;
+background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+url('img/header.jpg') center/cover no-repeat;
 color:white;
-padding:30px;
+padding:60px 20px;
 text-align:center;
+
+min-height:320px;
+display:flex;
+flex-direction:column;
+justify-content:center;
 }
+
+header h1{
+font-size:36px;
+margin-bottom:10px;
+}
+
+header p{
+font-size:16px;
+opacity:0.95;
+}
+
+/* NAV */
 
 nav{
 display:flex;
@@ -38,10 +64,13 @@ nav a{
 color:white;
 text-decoration:none;
 font-size:14px;
-background:#32475b;
-padding:7px 12px;
-border-radius:8px;
+background:rgba(255,255,255,0.15);
+padding:8px 14px;
+border-radius:20px;
+backdrop-filter: blur(6px);
 }
+
+/* CONTAINER */
 
 .container{
 max-width:1100px;
@@ -49,13 +78,23 @@ margin:auto;
 padding:20px;
 }
 
+/* CARD */
+
 .card{
 background:white;
 padding:24px;
 margin-bottom:24px;
-border-radius:14px;
-box-shadow:0 6px 18px rgba(0,0,0,0.08);
+border-radius:16px;
+box-shadow:0 10px 28px rgba(0,0,0,0.08);
+transition:0.3s;
 }
+
+.card:hover{
+transform:translateY(-4px);
+box-shadow:0 14px 32px rgba(0,0,0,0.12);
+}
+
+/* GALLERY */
 
 .gallery{
 display:grid;
@@ -65,8 +104,15 @@ gap:12px;
 
 img{
 width:100%;
-border-radius:10px;
+border-radius:12px;
+transition:0.3s;
 }
+
+img:hover{
+transform:scale(1.03);
+}
+
+/* BUTTON */
 
 .button{
 display:inline-block;
@@ -74,18 +120,29 @@ padding:12px 18px;
 background:#1f2f3f;
 color:white;
 text-decoration:none;
-border-radius:8px;
+border-radius:10px;
 margin:6px 4px;
 font-size:15px;
+transition:0.2s;
 }
+
+.button:hover{
+background:#2f4358;
+transform:translateY(-2px);
+}
+
+/* BADGE */
 
 .badge{
 background:#eef2f6;
 padding:8px 12px;
-border-radius:8px;
+border-radius:20px;
 display:inline-block;
 margin:4px;
+font-size:13px;
 }
+
+/* GRID */
 
 .grid{
 display:grid;
@@ -99,12 +156,16 @@ padding:10px;
 border-radius:10px;
 }
 
+/* MAP */
+
 .map{
 width:100%;
 height:380px;
 border:0;
 border-radius:12px;
 }
+
+/* RISTORANTI */
 
 .restaurant{
 display:grid;
@@ -119,6 +180,8 @@ height:90px;
 object-fit:cover;
 }
 
+/* FOOTER */
+
 footer{
 text-align:center;
 padding:30px;
@@ -126,246 +189,131 @@ font-size:14px;
 color:#777;
 }
 
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:14px 18px;
+border-radius:50px;
+font-size:16px;
+text-decoration:none;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+z-index:1000;
+}
+
+#google_translate_element{
+margin-top:15px;
+text-align:center;
+}
+
 </style>
 
 </head>
 
-
 <body>
-
 
 <header>
 
-<h1>🏡 Soggiorna a Fénis</h1>
+<h1>🏡 Lo Bouc e lo Berio</h1>
 
-<p>Appartamento accogliente nel cuore della Valle d'Aosta</p>
+<p>Accoglienti appartamenti indipendenti nel cuore della Valle d'Aosta, a due passi dal castello di Fénis</p>
 
 <nav>
-
-<a href="#appartamento">Appartamento</a>
+<a href="#appartamento">Appartamenti</a>
 <a href="#servizi">Servizi</a>
 <a href="#turismo">Cosa vedere</a>
-<a href="#gastronomia">Consigli enogastronomici</a>
+<a href="#gastronomia">Gastronomia</a>
 <a href="#prenota">Prenota</a>
-
 </nav>
+
+<div id="google_translate_element"></div>
 
 </header>
 
-
-
 <div class="container">
 
-<!-- INTRO -->
-
 <div class="card">
-
 <h2>Benvenuti a Fénis</h2>
-
 <p>
-Il nostro appartamento è il punto di partenza perfetto per esplorare la Valle d'Aosta.
-A pochi minuti dal famoso <b>Castello di Fénis</b>, vicino ad Aosta e alle montagne più spettacolari della regione.
+I nostri appartamenti sono il punto di partenza perfetto per esplorare la Valle d'Aosta.
+A pochi minuti dal famoso Castello di Fénis, vicino ad Aosta e alle montagne più spettacolari della regione.
 </p>
 
 <a class="button" href="#prenota">Prenota il soggiorno</a>
-
-<a class="button" href="https://wa.me/391234567890">
-Contattaci su WhatsApp
-</a>
-
+<a class="button" href="https://wa.me/391234567890">Contattaci su WhatsApp</a>
 </div>
-
-
-<!-- FOTO -->
 
 <div class="card" id="appartamento">
 
-<h2>📸 L'appartamento</h2>
+<h2>📸 Gli appartamenti</h2>
 
+<p>
+Due appartamenti da 43 mq, completamente indipendenti, con Wi-Fi, Smart TV, cucina attrezzata e parcheggio.
+</p>
+
+<b>Lo bouc</b>
 <div class="gallery">
+<img src="img/foto1.jpg">
+<img src="img/foto2.jpg">
+</div>
 
-<img src="foto1.jpg">
-<img src="foto2.jpg">
-<img src="foto3.jpg">
-<img src="foto4.jpg">
-
+<b>Lo berio</b>
+<div class="gallery">
+<img src="img/foto3.jpg">
+<img src="img/foto4.jpg">
 </div>
 
 </div>
-
-
-
-<!-- SERVIZI -->
 
 <div class="card" id="servizi">
 
-<h2>Servizi e comfort</h2>
+<h2>Servizi</h2>
 
-<div class="badge">Wi-Fi gratuito</div>
-<div class="badge">Cucina attrezzata</div>
+<div class="badge">Wi-Fi</div>
+<div class="badge">Cucina</div>
 <div class="badge">Smart TV</div>
-<div class="badge">Lavatrice</div>
 <div class="badge">Parcheggio</div>
 <div class="badge">Self check-in</div>
 
-<h3 style="margin-top:20px;">Servizi extra</h3>
-
-<div class="badge">Cesto colazione</div>
-<div class="badge">Lavanderia express</div>
-<div class="badge">Noleggio bici</div>
-<div class="badge">Escursioni guidate</div>
-
 </div>
-
-
-
-<!-- TURISMO -->
-
-<div id="turismo">
-
-<div class="card">
-
-<h2>🏰 Attrazioni vicino a Fénis</h2>
-
-<div class="grid">
-
-<div class="place-card">
-<img src="castello-fenis.jpg">
-<p><b>Castello di Fénis</b></p>
-</div>
-
-<div class="place-card">
-<img src="aosta.jpg">
-<p><b>Città di Aosta</b></p>
-</div>
-
-<div class="place-card">
-<img src="gran-paradiso.jpg">
-<p><b>Parco Nazionale Gran Paradiso</b></p>
-</div>
-
-<div class="place-card">
-<img src="skyway.jpg">
-<p><b>Skyway Monte Bianco</b></p>
-</div>
-
-</div>
-
-</div>
-
-
-
-<div class="card">
-
-<h2>Esperienze da non perdere</h2>
-
-<ul>
-
-<li>Trekking panoramici</li>
-<li>Noleggio e-bike</li>
-<li>Degustazioni vini valdostani</li>
-<li>Visita ai caseifici della Fontina</li>
-<li>Sci e ciaspolate</li>
-<li>Relax alle terme</li>
-
-</ul>
-
-</div>
-
-
-
-<div class="card">
-
-<h2>🗺️ Mappa della zona</h2>
-
-<iframe class="map"
-src="https://maps.google.com/maps?q=fenis%20aosta&t=&z=13&ie=UTF8&iwloc=&output=embed">
-</iframe>
-
-</div>
-
-</div>
-
-
-
-<!-- GASTRONOMIA -->
-
-<div class="card" id="gastronomia">
-
-<h2>🍝 Consigli enogastronomici</h2>
-
-<div class="restaurant">
-<img src="ristorante1.jpg">
-<div>
-<b>La Chatelaine</b><br>
-Cucina valdostana
-</div>
-</div>
-
-<div class="restaurant">
-<img src="ristorante2.jpg">
-<div>
-<b>Comtes de Challant</b><br>
-Ristorante tipico
-</div>
-</div>
-
-<div class="restaurant">
-<img src="gelateria.jpg">
-<div>
-<b>Gelateria artigianale</b>
-</div>
-</div>
-
-<div class="restaurant">
-<img src="pasticceria.jpg">
-<div>
-<b>Pasticceria locale</b>
-</div>
-</div>
-
-</div>
-
-
-
-<!-- PRENOTAZIONE -->
 
 <div class="card" id="prenota">
 
-<h2>Prenota il tuo soggiorno</h2>
+<h2>Prenota</h2>
 
-<p>
-
-Contattaci direttamente oppure prenota tramite la piattaforma che preferisci.
-
-</p>
-
-<a class="button" href="#">
-Prenota su Airbnb
-</a>
-
-<a class="button" href="#">
-Prenota su Booking
-</a>
-
-<a class="button" href="https://wa.me/391234567890">
-Contattaci su WhatsApp
-</a>
+<a class="button" href="#">Airbnb</a>
+<a class="button" href="#">Booking</a>
+<a class="button" href="https://wa.me/391234567890">WhatsApp</a>
 
 </div>
 
-
-
 </div>
-
 
 <footer>
-
-<p>Appartamento turistico a Fénis – Valle d'Aosta</p>
-
+<p>Appartamenti turistici a Fénis – Valle d'Aosta</p>
 </footer>
 
+<a class="whatsapp" href="https://wa.me/391234567890">
+💬 WhatsApp
+</a>
+
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    {
+      pageLanguage: 'it',
+      includedLanguages: 'en,fr,de,nl,zh-CN,ru,ja'
+    },
+    'google_translate_element'
+  );
+}
+</script>
+
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
-
 </html>

@@ -21,7 +21,11 @@
 body{
 font-family:Arial,Helvetica,sans-serif;
 margin:0;
-background:#f7f5f2;
+background: linear-gradient(
+  180deg,
+  #eef5f1 0%,
+  #f7f5f2 100%
+);
 color:#333;
 }
 
@@ -101,7 +105,7 @@ font-size:14px;
 .container{
 max-width:1100px;
 margin:auto;
-padding:20px;
+padding:30px 20px;
 }
 
 /* CARD */
@@ -263,7 +267,7 @@ z-index:1000;
 <h2>Benvenuti a Fénis</h2>
 <p>
 I nostri appartamenti sono il punto di partenza perfetto per esplorare la Valle d'Aosta.
-A pochi minuti dal famoso Castello di Fénis, dal Museo dell'Artigianato Valdostano (MAV), vicino ad Aosta e alle montagne più spettacolari della regione.
+A pochi minuti dal famoso <b>Castello di Fénis</b>, dal </b>Museo dell'Artigianato Valdostano (MAV)</b>, vicino ad Aosta e alle montagne più spettacolari della regione.
 </p>
 
 <a class="button" href="#prenota">Prenota il soggiorno</a>
@@ -414,7 +418,7 @@ A pochi minuti dal famoso Castello di Fénis, dal Museo dell'Artigianato Valdost
     <h2>🗺️ Mappa della zona</h2> 
     <iframe class="map" src="https://maps.google.com/maps?q=fenis%20aosta&t=&z=13&ie=UTF8&iwloc=&output=embed"> </iframe> 
   </div> 
-</div> 
+
   
 <!-- GASTRONOMIA --> 
   
@@ -456,7 +460,9 @@ A pochi minuti dal famoso Castello di Fénis, dal Museo dell'Artigianato Valdost
   
   <div class="restaurant"> <img src="pasticceria.jpg"> 
     <div> <b>Buzzi</b><br> Pasticceria locale (Nus) 
-    </div> </div> </div>
+    </div> </div> 
+
+</div>
 
 
 <!-- PRENOTA -->
@@ -497,3 +503,4 @@ function googleTranslateElementInit() {
 
 </body>
 </html>
+

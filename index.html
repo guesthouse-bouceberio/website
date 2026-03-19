@@ -23,18 +23,16 @@ font-family:Arial,Helvetica,sans-serif;
 margin:0;
 color:#333;
 
-/* gradiente più evidente e continuo */
-background: linear-gradient(
+background:
+linear-gradient(
   to bottom,
-  #dfeee6 0%,
-  #eaf4ee 30%,
-  #f4f1eb 70%,
-  #ffffff 100%
-);
+  rgba(220,240,230,0.9),
+  rgba(244,241,235,0.95)
+),
+url('texture.jpg'); /* opzionale */
 
-/* evita qualsiasi effetto ripetizione */
+background-size: cover;
 background-attachment: fixed;
-background-repeat: no-repeat;
 }
   
 /* HEADER */
@@ -501,6 +499,7 @@ function googleTranslateElementInit() {
 
 </body>
 </html>
+
 
 
 

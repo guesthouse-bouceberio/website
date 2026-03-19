@@ -21,12 +21,20 @@
 body{
 font-family:Arial,Helvetica,sans-serif;
 margin:0;
-background: linear-gradient(
-  180deg,
-  #e6f0ea 0%,
-  #f4f1eb 100%
-);
 color:#333;
+
+/* gradiente più evidente e continuo */
+background: linear-gradient(
+  to bottom,
+  #dfeee6 0%,
+  #eaf4ee 30%,
+  #f4f1eb 70%,
+  #ffffff 100%
+);
+
+/* evita qualsiasi effetto ripetizione */
+background-attachment: fixed;
+background-repeat: no-repeat;
 }
   
 /* HEADER */
@@ -493,6 +501,7 @@ function googleTranslateElementInit() {
 
 </body>
 </html>
+
 
 
 

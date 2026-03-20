@@ -260,10 +260,10 @@ z-index:1000;
 }
 
 /* PRENOTA SUBITO */
-  
- .prenota-float{
+
+.prenota-float{
 position:fixed;
-bottom:80px; /* 👈 sopra WhatsApp */
+bottom:80px;
 right:20px;
 
 background:#2f5d50;
@@ -273,16 +273,50 @@ border-radius:30px;
 font-size:14px;
 text-decoration:none;
 
-box-shadow:0 4px 12px rgba(0,0,0,0.3);
+box-shadow:0 4px 12px rgba(0,0,0,0.25);
 z-index:1000;
+
+/* animazione */
+animation:pulseSoft 4s infinite;
 
 transition:0.3s;
 }
 
-.prenota-float:hover{
-background:#1f3f35;
-transform:translateY(-2px);
-} 
+.prenota-float{
+animation:
+fadeInUp 0.6s ease,
+pulseSoft 4s 1s infinite;
+}
+
+@keyframes fadeInUp{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* ferma animazione quando hover */
+animation:none;
+}
+  
+@keyframes pulseSoft {
+0%{
+transform:scale(1);
+box-shadow:0 4px 12px rgba(0,0,0,0.25);
+}
+50%{
+transform:scale(1.05);
+box-shadow:0 8px 20px rgba(0,0,0,0.35);
+}
+100%{
+transform:scale(1);
+box-shadow:0 4px 12px rgba(0,0,0,0.25);
+}
+}
 </style>
 
 </head>
@@ -554,7 +588,7 @@ Appartamenti vacanze a Fénis, vicino al Castello di Fénis, ideali per visitare
 </a>
 
 <a class="prenota-float" href="#prenota">
-📅 Prenota subito
+📅 Prenota ora
 </a>
 
 <script>
@@ -573,6 +607,7 @@ function googleTranslateElementInit() {
 
 </body>
 </html>
+
 
 
 

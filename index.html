@@ -276,18 +276,25 @@ text-decoration:none;
 box-shadow:0 4px 12px rgba(0,0,0,0.25);
 z-index:1000;
 
-/* animazione */
-animation: pulseSoft 4s infinite;
+/* animazioni */
+animation:
+fadeInUp 0.6s ease,
+pulseSoft 4s 1s infinite;
 
 transition:0.3s;
 }
 
-.prenota-float{
-animation:
-fadeInUp 0.6s ease,
-pulseSoft 4s 1s infinite;
+/* HOVER */
+.prenota-float:hover{
+background:#1f3f35;
+transform:translateY(-3px) scale(1.05);
+box-shadow:0 8px 18px rgba(0,0,0,0.35);
+
+/* ferma animazione */
+animation:none;
 }
 
+/* ENTRATA */
 @keyframes fadeInUp{
 from{
 opacity:0;
@@ -299,10 +306,7 @@ transform:translateY(0);
 }
 }
 
-/* ferma animazione quando hover */
-animation:none;
-}
-  
+/* PULSE */
 @keyframes pulseSoft {
 0%{
 transform:scale(1);
@@ -607,6 +611,7 @@ function googleTranslateElementInit() {
 
 </body>
 </html>
+
 
 
 

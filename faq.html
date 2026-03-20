@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FAQ – Lo Bouc e lo Berio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+font-family:'Inter', sans-serif;
+margin:0;
+color:#333;
+
+background: linear-gradient(
+  to bottom,
+  #bcd8cc 0%,
+  #8fb3a3 30%,
+  #d6cec2 70%,
+  #b8aea0 100%
+);
+
+background-attachment: fixed;
+}
+
+h1, h2{
+font-family:'Playfair Display', serif;
+text-align:center;
+}
+
+/* CONTAINER */
+.container{
+max-width:800px;
+margin:40px auto;
+padding:20px;
+}
+
+/* CARD */
+.card{
+background:rgba(255,255,255,0.9);
+padding:24px;
+border-radius:16px;
+box-shadow:0 10px 28px rgba(0,0,0,0.1);
+margin-bottom:16px;
+}
+
+/* FAQ */
+.faq-item{
+margin-bottom:12px;
+border-radius:12px;
+overflow:hidden;
+}
+
+.faq-question{
+background:#2f5d50;
+color:white;
+padding:14px;
+cursor:pointer;
+font-weight:500;
+}
+
+.faq-answer{
+display:none;
+padding:14px;
+background:#f7f7f7;
+}
+
+/* CTA */
+.cta{
+text-align:center;
+margin-top:30px;
+}
+
+.button{
+display:inline-block;
+padding:12px 20px;
+background:#2f5d50;
+color:white;
+border-radius:30px;
+text-decoration:none;
+margin-top:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Domande frequenti</h1>
+
+<div class="card">
+
+<div class="faq-item">
+<div class="faq-question">📅 A che ora è il check-in?</div>
+<div class="faq-answer">
+Il check-in è flessibile grazie al self check-in, così puoi arrivare in autonomia all’orario che preferisci.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">🚗 C’è parcheggio?</div>
+<div class="faq-answer">
+Sì, è disponibile un ampio parcheggio gratuito davanti alla struttura.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">📍 Dove si trovano gli appartamenti?</div>
+<div class="faq-answer">
+Gli appartamenti si trovano a Fénis, in posizione tranquilla e strategica per visitare Aosta e tutta la Valle d’Aosta.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">🛏️ Quanti ospiti possono soggiornare?</div>
+<div class="faq-answer">
+Gli appartamenti sono ideali per coppie, famiglie o piccoli gruppi. Contattaci per verificare la soluzione migliore.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">📶 Ci sono Wi-Fi e servizi inclusi?</div>
+<div class="faq-answer">
+Sì, gli appartamenti sono dotati di Wi-Fi gratuito, Smart TV, cucina attrezzata e tutto il necessario per il soggiorno.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">🐶 Sono ammessi animali?</div>
+<div class="faq-answer">
+Contattaci per verificare la disponibilità e le condizioni per eventuali animali domestici.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">💳 Come posso prenotare?</div>
+<div class="faq-answer">
+Puoi prenotare contattandoci direttamente su WhatsApp oppure tramite piattaforme come Airbnb e Booking.
+</div>
+</div>
+
+</div>
+
+<div class="cta">
+<p>Non hai trovato quello che cercavi?</p>
+<a class="button" href="https://wa.me/391234567890">
+💬 Scrivici su WhatsApp
+</a>
+</div>
+
+</div>
+
+<script>
+
+/* apertura/chiusura FAQ */
+document.querySelectorAll('.faq-question').forEach(item => {
+  item.addEventListener('click', () => {
+    const answer = item.nextElementSibling;
+    answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+  });
+});
+
+</script>
+
+</body>
+</html>

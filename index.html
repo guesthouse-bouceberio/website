@@ -259,6 +259,30 @@ box-shadow:0 4px 10px rgba(0,0,0,0.3);
 z-index:1000;
 }
 
+/* PRENOTA SUBITO */
+  
+ .prenota-float{
+position:fixed;
+bottom:80px; /* 👈 sopra WhatsApp */
+right:20px;
+
+background:#2f5d50;
+color:white;
+padding:12px 16px;
+border-radius:30px;
+font-size:14px;
+text-decoration:none;
+
+box-shadow:0 4px 12px rgba(0,0,0,0.3);
+z-index:1000;
+
+transition:0.3s;
+}
+
+.prenota-float:hover{
+background:#1f3f35;
+transform:translateY(-2px);
+} 
 </style>
 
 </head>
@@ -524,8 +548,13 @@ Appartamenti vacanze a Fénis, vicino al Castello di Fénis, ideali per visitare
 </p></p>
 </footer>
 
-<a class="whatsapp" href="https://wa.me/391234567890?text=Buongiorno,%20vorrei%20sapere%20la%20disponibilità%20per%20un%20soggiorno%20dal%20__%20al%20__%20per%20__%20persone" target="_blank">
+
+  <a class="whatsapp" href="https://wa.me/391234567890?text=Buongiorno,%20vorrei%20sapere%20la%20disponibilità%20per%20un%20soggiorno%20dal%20__%20al%20__%20per%20__%20persone" target="_blank">
 💬 Scrivici
+</a>
+
+<a class="prenota-float" href="#prenota">
+📅 Prenota subito
 </a>
 
 <script>
@@ -544,6 +573,7 @@ function googleTranslateElementInit() {
 
 </body>
 </html>
+
 
 
 

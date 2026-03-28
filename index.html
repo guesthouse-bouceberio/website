@@ -242,24 +242,25 @@ color:#777;
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #25D366;
-  color: white;
+  background: white;
+  color: #333;
   padding: 12px 16px;
-  border-radius: 50px;
+  border-radius: 20px;
   display: flex;
+  flex-direction: column; /* 🔥 chiave */
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   z-index: 1000;
 }
 
 .contact-box .label {
   font-size: 16px;
-  margin-right: 5px;
 }
 
-.contact-box a {
+.icons {
   display: flex;
+  gap: 12px;
 }
 
 .contact-box svg {
@@ -670,31 +671,31 @@ Appartamenti vacanze a Fénis, vicino al Castello di Fénis, ideali per visitare
   <div class="contact-box">
   <span class="label">💬 Scrivici</span>
 
-  <!-- WhatsApp -->
-  <a href="https://wa.me/393277817829?text=Buongiorno,%20vorrei%20sapere%20la%20disponibilità%20per%20un%20soggiorno%20dal%20__%20al%20__%20per%20__%20persone" target="_blank">
-    <!-- SVG WhatsApp -->
-    <svg viewBox="0 0 24 24">
-      <circle cx="12" cy="12" r="12" fill="#25D366"/>
-      <path fill="#ffffff" d="M16.5 13.5c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.8.9-1 .9-.2 0-.4 0-.7-.2-.3-.2-1.2-.4-2.3-1.4-.8-.7-1.4-1.6-1.6-1.9-.2-.3 0-.5.2-.7.2-.2.3-.4.5-.6.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6 0-.2-.7-1.7-1-2.3-.2-.5-.5-.4-.7-.4h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.3 3.4 1.5 3.6c.2.2 2.6 4 6.3 5.6.9.4 1.6.6 2.2.7.9.1 1.7.1 2.3-.1.7-.2 2.1-.9 2.4-1.7.3-.8.3-1.5.2-1.7-.1-.2-.3-.3-.6-.5z"/>
-    </svg>
-  </a>
+  <div class="icons">
+    <!-- WhatsApp -->
+    <a href="https://wa.me/393277817829?text=Buongiorno,%20vorrei%20sapere%20la%20disponibilità%20per%20un%20soggiorno%20dal%20__%20al%20__%20per%20__%20persone" target="_blank">
+      <svg viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="12" fill="#25D366"/>
+        <path fill="#ffffff" d="M16.5 13.5c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.7.2-.2.3-.8.9-1 .9-.2 0-.4 0-.7-.2-.3-.2-1.2-.4-2.3-1.4-.8-.7-1.4-1.6-1.6-1.9-.2-.3 0-.5.2-.7.2-.2.3-.4.5-.6.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6 0-.2-.7-1.7-1-2.3-.2-.5-.5-.4-.7-.4h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.3 3.4 1.5 3.6c.2.2 2.6 4 6.3 5.6.9.4 1.6.6 2.2.7.9.1 1.7.1 2.3-.1.7-.2 2.1-.9 2.4-1.7.3-.8.3-1.5.2-1.7-.1-.2-.3-.3-.6-.5z"/>
+      </svg>
+    </a>
 
-  <!-- Telegram -->
-  <a href="https://t.me/mionomeutente" target="_blank">
-    <svg viewBox="0 0 240 240">
-      <circle cx="120" cy="120" r="120" fill="#29A9EA"/>
-      <path d="M180 70L60 115c-5 2-5 6-1 7l30 9 11 34c1 4 3 5 6 3l17-17 28 20c5 3 8 1 9-5l20-92c2-6-2-9-6-7z" fill="#ffffff"/>
-    </svg>
-  </a>
+    <!-- Telegram -->
+    <a href="https://t.me/mionomeutente" target="_blank">
+      <svg viewBox="0 0 240 240">
+        <circle cx="120" cy="120" r="120" fill="#29A9EA"/>
+        <path d="M180 70L60 115c-5 2-5 6-1 7l30 9 11 34c1 4 3 5 6 3l17-17 28 20c5 3 8 1 9-5l20-92c2-6-2-9-6-7z" fill="#ffffff"/>
+      </svg>
+    </a>
 
-  <!-- Signal -->
-  <a href="https://signal.me/#p/+393XXXXXXXXX" target="_blank">
-    <svg viewBox="0 0 24 24">
-      <path fill="#2A5BD7" d="M12 2a10 10 0 0 0-8 16.1V22l4-2.1A10 10 0 1 0 12 2z"/>
-      <path fill="#ffffff" d="M7 9h10v2H7zm0 4h7v2H7z"/>
-    </svg>
-  </a>
-
+    <!-- Signal -->
+    <a href="https://signal.me/#p/+393XXXXXXXXX" target="_blank">
+      <svg viewBox="0 0 24 24">
+        <path fill="#2A5BD7" d="M12 2a10 10 0 0 0-8 16.1V22l4-2.1A10 10 0 1 0 12 2z"/>
+        <path fill="#ffffff" d="M7 9h10v2H7zm0 4h7v2H7z"/>
+      </svg>
+    </a>
+  </div>
 </div>
 
 <a class="prenota-float" href="#prenota">

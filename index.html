@@ -159,7 +159,11 @@ transform:scale(1.03);
 /* BUTTON */
 
 .button{
-display:inline-block;
+display:inline-flex;
+display: inline-flex;
+align-items: center;
+gap: 10px;
+white-space: nowrap;
 padding:12px 22px;
 background:#2f5d50;
 color:white;
@@ -172,11 +176,27 @@ transition:0.3s;
 box-shadow:0 4px 12px rgba(0,0,0,0.15);
 }
 
+  
 .button:hover{
 background:#1f3f35;
 transform:translateY(-2px);
 }
 
+
+.button .icons {
+  display: flex;
+  gap: 8px;
+}
+
+.button svg {
+  width: 22px;
+  height: 22px;
+}
+
+.button svg:hover {
+  transform: scale(1.15);
+}
+  
 /* BADGE */
 
 .badge{
@@ -414,7 +434,7 @@ box-shadow:0 4px 12px rgba(0,0,0,0.25);
   <a class="button" href="#prenota">Prenota il tuo soggiorno</a>
 
   <a class="button" href="https://wa.me/393277817829?text=Buongiorno,_" target="_blank">
-  <span class="text">Prenota o chiedi info su:</span>
+  <span class="text">Chiedi info su:</span>
 
   <span class="icons">
     <!-- WhatsApp -->

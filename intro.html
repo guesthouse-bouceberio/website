@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Introduction</title>
+
+<meta name="description" content="Accoglienti appartamenti indipendenti per vacanze a Fénis in Valle d'Aosta. Vicino al Castello di Fénis, Aosta e alle montagne più belle della regione.">
+
+<meta property="og:title" content="Appartamento Vacanze a Fénis">
+<meta property="og:description" content="Scopri i nostri appartamenti nel cuore della Valle d'Aosta">
+<meta property="og:type" content="website">
+<meta property="og:image" content="header.jpg">
+
+<meta name="theme-color" content="#2f5d50">
+
+<!-- PERFORMANCE FONT -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+  font-family:'Inter', sans-serif;
+  margin:0;
+
+  display:flex;
+  flex-direction: column; /* 👈 QUESTO RISOLVE */
+
+  align-items:center;
+  justify-content:center;
+  min-height:100vh;
+
+  text-align:center;
+
+  background: linear-gradient(
+    to bottom,
+    #bcd8cc 0%,
+    #8fb3a3 30%,
+    #d6cec2 70%,
+    #b8aea0 100%
+  );
+}
+
+.container{
+  max-width:500px;
+  margin:40px auto;
+  
+  background: rgba(255,255,255,0.95);
+  padding:40px 30px;
+  border-radius:20px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.15);
+  max-width:500px;
+  animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(15px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+h1{
+  font-family:'Playfair Display', serif;
+  color:#2f5d50;
+  margin-bottom:10px;
+}
+
+p{
+  color:#555;
+  font-size:15px;
+  margin-bottom:25px;
+}
+
+.icon{
+  font-size:50px;
+  margin-bottom:15px;
+}
+
+.button{
+  display:inline-block;
+  padding:12px 20px;
+  border-radius:30px;
+  background:#2f5d50;
+  color:white;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.button:hover{
+  background:#1f3f35;
+  transform:translateY(-2px);
+}
+
+  /* HEADER */
+
+header{
+background:
+linear-gradient(rgba(9, 9, 9, 1), rgba(20,40,35,0.55)),
+url('header_transparent.png') center bottom/contain no-repeat;
+
+width:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+ /* LOGO */
+ .logo {
+  width: 33%;
+  max-width: 1536px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .logo {
+    width: 70%;
+  }
+}
+
+  /* TRADUTTORE PULITO */
+
+#google_translate_element{
+margin-top:15px;
+text-align:center;
+}
+
+.goog-logo-link {
+display:none !important;
+}
+
+.goog-te-gadget span {
+display:none !important;
+}
+
+.goog-te-gadget {
+color:transparent !important;
+}
+
+.goog-te-gadget select{
+padding:6px 10px;
+border-radius:8px;
+border:none;
+font-size:14px;
+width: auto;
+display: inline-block;
+}
+  
+</style>
+
+</head>
+
+<body>
+<header>
+
+<img src="logo_transparent.png" class="logo">
+
+
+<div id="google_translate_element"></div>
+
+</header>
+  
+<div class="container">
+
+  <div class="icon">🙏</div>
+
+  <h2>👋 Hi! Thank you for contacting us.</h2>
+
+  <p> We have received your inquiry. We will get back to you as soon as possible during our support hours (8:00 AM – 7:00 PM).
+
+In the meantime, you can find more information here:
+🌐 Website: https://guesthouse-bouceberio.github.io/website/
+❓ FAQs (check-in, check-out, amenities, payments): https://guesthouse-bouceberio.github.io/website/faq.html
+
+To help us assist you faster, please let us know:
+📅 Your stay dates
+👥 Number of guests
+
+Thank you for your patience, speak soon!
+
+</div>
+
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>

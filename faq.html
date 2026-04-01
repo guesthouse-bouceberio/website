@@ -164,6 +164,69 @@ border:none;
 font-size:14px;
 }
 
+/* PRENOTA SUBITO */
+
+.prenota-float{
+position:fixed;
+bottom:120px;
+right:20px;
+
+background:rgba(245, 101, 39, 0.8);
+color:white;
+padding:12px 16px;
+border-radius:30px;
+font-size:14px;
+text-decoration:none;
+
+box-shadow:0 4px 12px rgba(0,0,0,0.25);
+z-index:1000;
+
+/* animazioni */
+animation:
+fadeInUp 0.6s ease,
+pulseSoft 4s 1s infinite;
+
+transition:0.3s;
+}
+
+/* HOVER */
+.prenota-float:hover{
+background:#1f3f35;
+transform:translateY(-3px) scale(1.05);
+box-shadow:0 8px 18px rgba(0,0,0,0.35);
+
+/* ferma animazione */
+animation:none;
+}
+
+/* ENTRATA */
+@keyframes fadeInUp{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* PULSE */
+@keyframes pulseSoft {
+0%{
+transform:scale(1);
+box-shadow:0 4px 12px rgba(0,0,0,0.25);
+}
+50%{
+transform:scale(1.05);
+box-shadow:0 8px 20px rgba(0,0,0,0.35);
+}
+100%{
+transform:scale(1);
+box-shadow:0 4px 12px rgba(0,0,0,0.25);
+}
+}
+  
   /* LOGO */
  .logo {
   width: 33%;
@@ -269,11 +332,6 @@ font-size:14px;
 
 <div id="google_translate_element"></div>
 
-<div class="container">
-
-  <a href="https://guesthouse-bouceberio.github.io/guida-ospiti/" class="button">Vai al nostro sito</a>
-
-</div>
   
   <h1>Domande frequenti</h1>
 
@@ -463,7 +521,11 @@ Puoi prenotare contattandoci direttamente su WhatsApp oppure tramite piattaforme
   </div>
 </div>
   
-<script>
+<a class="prenota-float" href="#prenota">
+🏡 Vai al nostro sito
+</a>
+  
+  <script>
 
 /* apertura/chiusura FAQ */
 document.querySelectorAll('.faq-question').forEach(item => {

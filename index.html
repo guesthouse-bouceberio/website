@@ -418,7 +418,8 @@ box-shadow:0 4px 12px rgba(0,0,0,0.25);
   transition: 0.2s;
 }
 
-/* ATTIVITA */
+/* LISTA ATTIVITÀ */
+
 .attivita-list {
   list-style: none;
   padding: 0;
@@ -429,21 +430,21 @@ box-shadow:0 4px 12px rgba(0,0,0,0.25);
   padding: 14px 0;
   border-bottom: 1px solid rgba(0,0,0,0.08);
   position: relative;
-  padding-left: 28px;
+  padding-left: 30px;
 }
 
 .attivita-list li:last-child {
   border-bottom: none;
 }
 
-/* Icona alpina elegante */
+/* ❄️ Fiocco di neve */
 .attivita-list li::before {
-  content: "▲";
-  color: #6fa89a;
+  content: "❄";
+  color: #7daea3;
   position: absolute;
   left: 0;
-  top: 16px;
-  font-size: 10px;
+  top: 14px;
+  font-size: 14px;
 }
 
 /* Titolo attività */
@@ -462,10 +463,13 @@ box-shadow:0 4px 12px rgba(0,0,0,0.25);
   color: #555;
 }
 
-/* Titolo sezione */
+/* Titolo sezione con icona */
 .attivita-card h2 {
   color: #2f5d50;
   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 </style>
@@ -708,7 +712,7 @@ box-shadow:0 4px 12px rgba(0,0,0,0.25);
   
  
   <div class="card attivita-card">
-    <h2>Adrenalina e sport all'aria aperta</h2>
+    <h2>⛰️ Adrenalina e sport all'aria aperta</h2>
 
     <ul class="attivita-list">
       <li>

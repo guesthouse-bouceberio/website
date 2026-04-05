@@ -419,52 +419,54 @@ box-shadow:0 4px 12px rgba(0,0,0,0.25);
 }
 
 /* ATTIVITA */
-  .attivita-container {
-    font-family: 'Segoe UI', sans-serif;
-    max-width: 800px;
-    margin: 0 auto;
-    color: #2c2c2c;
-  }
+.attivita-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
 
-  .attivita-container h2 {
-    color: #2f5d50;
-    border-bottom: 2px solid #d8e3dc;
-    padding-bottom: 5px;
-  }
+.attivita-list li {
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  position: relative;
+  padding-left: 28px;
+}
 
-  .attivita-list {
-    list-style: none;
-    padding: 0;
-  }
+.attivita-list li:last-child {
+  border-bottom: none;
+}
 
-  .attivita-list li {
-    padding: 15px 0;
-    border-bottom: 1px dashed #cfd8dc;
-    position: relative;
-    padding-left: 30px;
-  }
+/* Icona alpina elegante */
+.attivita-list li::before {
+  content: "▲";
+  color: #6fa89a;
+  position: absolute;
+  left: 0;
+  top: 16px;
+  font-size: 10px;
+}
 
-  .attivita-list li::before {
-    content: "❄️";
-    position: absolute;
-    left: 0;
-    top: 15px;
-  }
+/* Titolo attività */
+.attivita-titolo {
+  color: #2f5d50;
+  font-weight: 600;
+  font-size: 1.05em;
+  display: block;
+  margin-bottom: 4px;
+}
 
-  .attivita-titolo {
-    color: #3a7d6b;
-    font-weight: 600;
-    font-size: 1.1em;
-    display: block;
-    margin-bottom: 5px;
-  }
+/* Descrizione */
+.attivita-descrizione {
+  font-size: 0.95em;
+  line-height: 1.5;
+  color: #555;
+}
 
-  .attivita-descrizione {
-    font-size: 0.95em;
-    line-height: 1.5;
-    color: #555;
-  }
-
+/* Titolo sezione */
+.attivita-card h2 {
+  color: #2f5d50;
+  margin-bottom: 10px;
+}
 
 </style>
 
@@ -705,67 +707,67 @@ box-shadow:0 4px 12px rgba(0,0,0,0.25);
 </div>
   
  
-<div class="attivita-container">
-  <h2>Adrenalina e sport all'aria aperta</h2>
+  <div class="card attivita-card">
+    <h2>Adrenalina e sport all'aria aperta</h2>
 
-  <ul class="attivita-list">
-    <li>
-      <span class="attivita-titolo">Trekking</span>
-      <span class="attivita-descrizione">
-        Numerosi sentieri panoramici adatti a ogni livello, tra boschi, alpeggi e viste mozzafiato sulle montagne della Valle d’Aosta.
-      </span>
-    </li>
+    <ul class="attivita-list">
+      <li>
+        <span class="attivita-titolo">Trekking</span>
+        <span class="attivita-descrizione">
+          Sentieri panoramici per tutti i livelli tra boschi, alpeggi e viste spettacolari sulle montagne valdostane.
+        </span>
+      </li>
 
-    <li>
-      <span class="attivita-titolo">Mountain Bike (MTB)</span>
-      <span class="attivita-descrizione">
-        Percorsi per tutti: dalle tranquille strade poderali ai trail tecnici, fino al downhill su piste attrezzate per gli amanti dell’adrenalina.
-      </span>
-    </li>
+      <li>
+        <span class="attivita-titolo">Mountain Bike (MTB)</span>
+        <span class="attivita-descrizione">
+          Percorsi che vanno dalle tranquille strade poderali fino ai trail tecnici e alle piste downhill attrezzate.
+        </span>
+      </li>
 
-    <li>
-      <span class="attivita-titolo">Pista ciclabile</span>
-      <span class="attivita-descrizione">
-        Un itinerario sicuro e immerso nella natura che collega Châtillon, Fénis e Aosta, perfetto per famiglie e ciclisti di ogni livello.
-      </span>
-    </li>
+      <li>
+        <span class="attivita-titolo">Pista ciclabile</span>
+        <span class="attivita-descrizione">
+          Tracciato immerso nella natura che collega Châtillon, Fénis e Aosta, ideale per famiglie e ciclisti.
+        </span>
+      </li>
 
-    <li>
-      <span class="attivita-titolo">Via Francigena</span>
-      <span class="attivita-descrizione">
-        Storico cammino di pellegrinaggio che attraversa la regione, ideale per escursionisti alla ricerca di natura, cultura e spiritualità.
-      </span>
-    </li>
+      <li>
+        <span class="attivita-titolo">Via Francigena</span>
+        <span class="attivita-descrizione">
+          Antico itinerario di pellegrinaggio tra cultura e natura, perfetto per cammini lenti e suggestivi.
+        </span>
+      </li>
 
-    <li>
-      <span class="attivita-titolo">Sci alpino</span>
-      <span class="attivita-descrizione">
-        Accesso rapido ai più rinomati comprensori sciistici come Cervinia, Pila, La Thuile, Courmayeur e Monterosa Ski.
-      </span>
-    </li>
+      <li>
+        <span class="attivita-titolo">Sci alpino</span>
+        <span class="attivita-descrizione">
+          Comprensori di fama internazionale come Cervinia, Pila, La Thuile e Courmayeur raggiungibili in breve tempo.
+        </span>
+      </li>
 
-    <li>
-      <span class="attivita-titolo">Sci di fondo</span>
-      <span class="attivita-descrizione">
-        Chilometri di piste immerse nel silenzio della natura, ideali per chi cerca uno sport completo e rilassante.
-      </span>
-    </li>
+      <li>
+        <span class="attivita-titolo">Sci di fondo</span>
+        <span class="attivita-descrizione">
+          Piste immerse nel silenzio della natura, ideali per uno sport completo e rilassante.
+        </span>
+      </li>
 
-    <li>
-      <span class="attivita-titolo">Ciaspolate</span>
-      <span class="attivita-descrizione">
-        Passeggiate sulla neve con racchette, tra boschi innevati e paesaggi incantati, perfette anche per principianti.
-      </span>
-    </li>
+      <li>
+        <span class="attivita-titolo">Ciaspolate</span>
+        <span class="attivita-descrizione">
+          Escursioni sulla neve tra boschi innevati e paesaggi incantati, adatte anche ai principianti.
+        </span>
+      </li>
 
-    <li>
-      <span class="attivita-titolo">Rafting</span>
-      <span class="attivita-descrizione">
-        Emozionanti discese lungo la Dora Baltea, tra rapide e scenari spettacolari, per un’esperienza adrenalinica in acqua.
-      </span>
-    </li>
-  </ul>
-</div> 
+      <li>
+        <span class="attivita-titolo">Rafting</span>
+        <span class="attivita-descrizione">
+          Discese emozionanti lungo la Dora Baltea tra rapide e scenari spettacolari.
+        </span>
+      </li>
+    </ul>
+</div>
  
   
 <div class="card"> 

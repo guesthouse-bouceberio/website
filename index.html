@@ -417,7 +417,55 @@ box-shadow:0 4px 12px rgba(0,0,0,0.25);
   transform: scale(1.1);
   transition: 0.2s;
 }
-  
+
+/* ATTIVITA */
+  .attivita-container {
+    font-family: 'Segoe UI', sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #2c2c2c;
+  }
+
+  .attivita-container h2 {
+    color: #2f5d50;
+    border-bottom: 2px solid #d8e3dc;
+    padding-bottom: 5px;
+  }
+
+  .attivita-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .attivita-list li {
+    padding: 15px 0;
+    border-bottom: 1px dashed #cfd8dc;
+    position: relative;
+    padding-left: 30px;
+  }
+
+  .attivita-list li::before {
+    content: "❄️";
+    position: absolute;
+    left: 0;
+    top: 15px;
+  }
+
+  .attivita-titolo {
+    color: #3a7d6b;
+    font-weight: 600;
+    font-size: 1.1em;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .attivita-descrizione {
+    font-size: 0.95em;
+    line-height: 1.5;
+    color: #555;
+  }
+
+
 </style>
 
 </head>
@@ -656,19 +704,69 @@ box-shadow:0 4px 12px rgba(0,0,0,0.25);
   </div> 
 </div>
   
-<div class="card"> 
-<h2>Adrenalina e sport all'aria aperta</h2> 
-    <ul> 
-      <li><b>Trekking:</b> numerosi sentieri panoramici, adatti a svariati livelli di esperienza, che permettono di percorrere entrambi i versanti della vallata.</li> 
-      <li><b>MTB</b>: da strade poderali pianeggianti a veri e propri sentieri tecnici, con la possibilità per praticare downhill su piste attrezzate.</li> 
-      <li><b>Pista ciclabile</b>: strada dedicata alle due ruote che parte da Chatillon, passa per Fénis e permette di arrivare fino ad Aosta, senza mai trovarsi su strade aperte al traffico.</li> 
-      <li><b>Via Francigena</b>: storico itinerario di pellegrinaggio che collega Canterbury (Inghilterra) a Roma, passando per la Valle d'Aosta. </li> 
-      <li><b>Sci alpino</b>: la Valle ospita alcuni tra i più rinomati comprensori sciistici, tra cui Cervinia, Pila, La Thuile, Courmayeur e Monteorosa, tutti raggiungibili dai nostri appartamenti entro un'ora di macchina.</li>
-      <li><b>Sci di fondo</b>:</li> 
-      <li>Ciaspolate</li> 
-      <li>Rafting</li> 
-    </ul> 
+ 
+<div class="attivita-container">
+  <h2>Adrenalina e sport all'aria aperta</h2>
+
+  <ul class="attivita-list">
+    <li>
+      <span class="attivita-titolo">Trekking</span>
+      <span class="attivita-descrizione">
+        Numerosi sentieri panoramici adatti a ogni livello, tra boschi, alpeggi e viste mozzafiato sulle montagne della Valle d’Aosta.
+      </span>
+    </li>
+
+    <li>
+      <span class="attivita-titolo">Mountain Bike (MTB)</span>
+      <span class="attivita-descrizione">
+        Percorsi per tutti: dalle tranquille strade poderali ai trail tecnici, fino al downhill su piste attrezzate per gli amanti dell’adrenalina.
+      </span>
+    </li>
+
+    <li>
+      <span class="attivita-titolo">Pista ciclabile</span>
+      <span class="attivita-descrizione">
+        Un itinerario sicuro e immerso nella natura che collega Châtillon, Fénis e Aosta, perfetto per famiglie e ciclisti di ogni livello.
+      </span>
+    </li>
+
+    <li>
+      <span class="attivita-titolo">Via Francigena</span>
+      <span class="attivita-descrizione">
+        Storico cammino di pellegrinaggio che attraversa la regione, ideale per escursionisti alla ricerca di natura, cultura e spiritualità.
+      </span>
+    </li>
+
+    <li>
+      <span class="attivita-titolo">Sci alpino</span>
+      <span class="attivita-descrizione">
+        Accesso rapido ai più rinomati comprensori sciistici come Cervinia, Pila, La Thuile, Courmayeur e Monterosa Ski.
+      </span>
+    </li>
+
+    <li>
+      <span class="attivita-titolo">Sci di fondo</span>
+      <span class="attivita-descrizione">
+        Chilometri di piste immerse nel silenzio della natura, ideali per chi cerca uno sport completo e rilassante.
+      </span>
+    </li>
+
+    <li>
+      <span class="attivita-titolo">Ciaspolate</span>
+      <span class="attivita-descrizione">
+        Passeggiate sulla neve con racchette, tra boschi innevati e paesaggi incantati, perfette anche per principianti.
+      </span>
+    </li>
+
+    <li>
+      <span class="attivita-titolo">Rafting</span>
+      <span class="attivita-descrizione">
+        Emozionanti discese lungo la Dora Baltea, tra rapide e scenari spettacolari, per un’esperienza adrenalinica in acqua.
+      </span>
+    </li>
+  </ul>
 </div> 
+ 
   
 <div class="card"> 
     <h2>🗺️ Mappa della zona</h2> 

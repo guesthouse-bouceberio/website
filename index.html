@@ -472,6 +472,38 @@ box-shadow:0 4px 12px rgba(0,0,0,0.25);
   gap: 8px;
 }
 
+/* VAI AL SITO */
+  .link-elegante {
+  font-size: 0.85em;
+  color: #6b6b6b;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  margin-top: 6px;
+  letter-spacing: 0.3px;
+  transition: color 0.25s ease;
+}
+
+/* linea sottile animata */
+.link-elegante::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 1px;
+  background-color: #2f5d50;
+  transition: width 0.25s ease;
+}
+
+.link-elegante:hover {
+  color: #2f5d50;
+}
+
+.link-elegante:hover::after {
+  width: 100%;
+}
+  
 </style>
 
 </head>
@@ -640,12 +672,16 @@ box-shadow:0 4px 12px rgba(0,0,0,0.25);
 
     <div class="place-card">
       <img src="castello-fenis.jpg">
-      <p><b>Castello di Fénis</b></p>
+      <p><b>Castello di Fénis</b><br>
+      <a href="https://www.midaticket.it/eventi/castello-di-fenis/" target="_blank" class="link-elegante"> ↗ Vai al sito </a>
+      </p>
     </div>
 
     <div class="place-card">
       <img src="mav-fenis.jpg"> 
-      <p><b>Museo dell'Artigianato Valdostano</b> (Fénis)</p> 
+      <p><b>Museo dell'Artigianato Valdostano</b> (Fénis)<br>
+      <a href="https://lartisana.vda.it/cultura/mav/" target="_blank" class="link-elegante"> ↗ Vai al sito </a>
+      </p> 
     </div> 
   
     <div class="place-card"> 

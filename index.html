@@ -196,18 +196,22 @@ img:hover {
 .button {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
 
-  background: #2f5d50;
+  background: var(--color-primary);
   color: white;
 
-  padding: 12px 22px;
-  border-radius: 30px;
+  padding: 12px 20px;
+  min-height: 44px; /* 👈 altezza uniforme */
 
+  border-radius: 30px;
   text-decoration: none;
   font-weight: 500;
 
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  line-height: 1; /* 👈 evita stretching verticale */
+
+  box-shadow: var(--shadow-soft);
   transition: 0.3s;
 }
 
@@ -217,9 +221,9 @@ img:hover {
 }
 
 .button svg {
-  width: 22px;
-  height: 22px;
-  transition: transform 0.2s ease;
+  width: 18px;   /* 👈 leggermente più piccole */
+  height: 18px;
+  flex-shrink: 0;
 }
 
 .button svg:hover {

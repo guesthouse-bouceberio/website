@@ -196,16 +196,18 @@ img:hover {
 .button {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
+   gap: 10px;
 
   background: #2f5d50;
   color: white;
 
-  padding: 12px 22px;
+  padding: 10px 20px;
   border-radius: 30px;
 
   text-decoration: none;
   font-weight: 500;
+   line-height: 1.2;
 
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   transition: 0.3s;
@@ -217,13 +219,18 @@ img:hover {
 }
 
 .button svg {
-  width: 22px;
-  height: 22px;
-  transition: transform 0.2s ease;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
 }
 
 .button svg:hover {
   transform: scale(1.15);
+}
+
+   .button.has-icon {
+  gap: 6px;              /* meno spazio tra icona e testo */
+  padding: 10px 14px;    /* meno spazio ai lati */
 }
 
 /* =========================
@@ -369,7 +376,7 @@ footer {
 
 .prenota-float {
   position: fixed;
-  bottom: 120px;
+  bottom: 115px;
   right: 20px;
 
   background: #2f5d50;
@@ -455,7 +462,7 @@ footer {
 }
 
 .attivita-intro {
-  color: #3f6f63;
+  color: #000000;
   font-size: 0.9em;
   line-height: 1.5;
   margin: 10px 0 15px 0;
@@ -563,7 +570,7 @@ footer {
 
 .back-to-top {
   position: fixed;
-  bottom: 185px; /* 👈 sopra contact box */
+  bottom: 170px; /* 👈 sopra contact box */
   right: 20px;
 
   width: 44px;
@@ -780,7 +787,7 @@ footer {
     
   <a class="button" href="#prenota">Prenota il tuo soggiorno</a>
 
-  <div class="button">
+  <a class="button has-icon">
   <span class="text">Chiedi info su:</span>
 
    <div class="social-links">
@@ -1115,7 +1122,7 @@ footer {
 
 <p>Contattaci direttamente per ricevere disponibilità e prezzi in pochi minuti.</p>
 
-<div class="button">
+<a class="button has-icon">
   <span class="text">Prenota tramite:</span>
 
  <div class="social-links">
@@ -1310,6 +1317,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

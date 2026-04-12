@@ -1,1 +1,1349 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Appartamenti Vacanze a Fénis</title>
+
+<meta name="description" content="Accoglienti appartamenti indipendenti per vacanze a Fénis in Valle d'Aosta. Vicino al Castello di Fénis, Aosta e alle montagne più belle della regione.">
+
+<meta property="og:title" content="Appartamento Vacanze a Fénis">
+<meta property="og:description" content="Scopri i nostri appartamenti nel cuore della Valle d'Aosta">
+<meta property="og:type" content="website">
+<meta property="og:image" content="header.jpg">
+
+<meta name="theme-color" content="#2f5d50">
+
+<!-- PERFORMANCE FONT -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.png" type="image/png">
+<style>
+
+/* =========================
+   BASE
+========================= */
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  color: #333;
+
+  font-size: 0.92em; /* 👈 FONT UNIFICATO */
+
+  background: linear-gradient(
+    to bottom,
+    #bcd8cc 0%,
+    #8fb3a3 30%,
+    #d6cec2 70%,
+    #b8aea0 100%
+  );
+  background-attachment: fixed;
+   
+   -webkit-tap-highlight-color: transparent;
+
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.5px;
+}
+
+h2 {
+  font-size: 1.4em; /* mantiene gerarchia */
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+  background:
+    linear-gradient(rgba(9, 9, 9, 1), rgba(20,40,35,0.55)),
+    url('header_transparent.png') center bottom/contain no-repeat;
+
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* =========================
+   NAV
+========================= */
+
+nav {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #f5f5f5;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+
+  background: rgba(140, 189, 170, 0.5);
+  backdrop-filter: blur(8px);
+
+  padding: 10px 18px;
+  border-radius: 20px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  transform: translateY(-2px);
+  background: #7aa895;
+}
+
+/* =========================
+   TRADUTTORE
+========================= */
+
+#google_translate_element {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.goog-logo-link,
+.goog-te-gadget span {
+  display: none !important;
+}
+
+.goog-te-gadget {
+  color: transparent !important;
+}
+
+.goog-te-gadget select {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: none;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+
+.container {
+  max-width: 1000px;
+  margin: 2px auto;
+  padding: 30px 20px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+  background: rgba(255,255,255,0.88);
+  padding: 26px;
+  margin-bottom: 26px;
+
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+  backdrop-filter: blur(6px);
+
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(0,0,0,0.12);
+}
+
+.card p {
+  margin-bottom: 10px;
+}
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 12px;
+}
+
+img {
+  width: 100%;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+img:hover {
+  transform: scale(1.03);
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  background: #2f5d50;
+  color: white;
+
+  padding: 12px 22px;
+  border-radius: 30px;
+
+  text-decoration: none;
+  font-weight: 500;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: 0.3s;
+}
+
+.button:hover {
+  background: #1f3f35;
+  transform: translateY(-2px);
+}
+
+.button svg {
+  width: 22px;
+  height: 22px;
+  transition: transform 0.2s ease;
+}
+
+.button svg:hover {
+  transform: scale(1.15);
+}
+
+/* =========================
+   BADGE
+========================= */
+
+.badge {
+  background: #e3efe9;
+  color: #2f5d50;
+
+  padding: 8px 14px;
+  border-radius: 20px;
+
+  display: inline-block;
+  margin: 4px;
+
+  font-size: 0.9em;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+  gap: 16px;
+}
+
+.place-card {
+  background: #f9fbfd;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* =========================
+   MAP
+========================= */
+
+.map {
+  width: 100%;
+  height: 380px;
+  border: 0;
+  border-radius: 12px;
+}
+
+/* =========================
+   RISTORANTI
+========================= */
+
+.restaurant {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.restaurant img {
+  width: 110px;
+  height: 90px;
+  object-fit: cover;
+}
+
+/* =========================
+   FOOTER (DISCLAIMER STYLE)
+========================= */
+
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #777;
+  font-size: 0.8em; /* 👈 più piccolo */
+  line-height: 1.4;
+}
+
+/* =========================
+   CONTACT BOX
+========================= */
+
+.contact-box {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  background: #8CBDAA;
+  color: #f5f5f5;
+
+  padding: 12px 16px;
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  z-index: 1000;
+}
+
+.contact-box .label {
+  font-weight: 600;
+}
+
+.contact-box svg {
+  width: 28px;
+  height: 28px;
+  fill: #f5f5f5;
+
+  transition: 0.2s;
+}
+
+.contact-box svg:hover {
+  transform: scale(1.15);
+  opacity: 0.85;
+}
+
+/* =========================
+   SOCIAL LINKS
+========================= */
+
+.social-links {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  gap: 10px !important; /* 👈 forza distanza */
+}
+
+.social-links svg {
+  width: 28px;
+  height: 28px;
+  filter: drop-shadow(0 2px 3px rgba(0,0,0,0.2));
+  transition: transform 0.2s ease;
+}
+
+.social-links svg:hover {
+  transform: scale(1.1);
+   transition: 0.2s;
+}
+
+/* =========================
+   PRENOTA FLOAT
+========================= */
+
+.prenota-float {
+  position: fixed;
+  bottom: 120px;
+  right: 20px;
+
+  background: #2f5d50;
+  color: white;
+
+  padding: 12px 16px;
+  border-radius: 30px;
+
+  text-decoration: none;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  z-index: 1000;
+
+  animation: fadeInUp 0.6s ease, pulseSoft 4s 1s infinite;
+}
+
+.prenota-float:hover {
+  background: #1f3f35;
+  transform: translateY(-3px) scale(1.05);
+  animation: none;
+}
+
+/* =========================
+   ANIMAZIONI
+========================= */
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseSoft {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+  width: 33%;
+  max-width: 1536px;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .logo { width: 70%; }
+}
+
+/* =========================
+   LISTE ATTIVITÀ
+========================= */
+
+.attivita-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.attivita-list li {
+  padding: 14px 0 14px 30px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  position: relative;
+}
+
+.attivita-list li::before {
+  content: "❄";
+  position: absolute;
+  left: 0;
+  top: 14px;
+  color: #7daea3;
+}
+
+
+.attivita-card h2 {
+  color: #2f5d50;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.attivita-intro {
+  color: #3f6f63;
+  font-size: 0.9em;
+  line-height: 1.5;
+  margin: 10px 0 15px 0;
+}
+
+.attivita-titolo {
+  color: #2f5d50;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.attivita-descrizione {
+  color: #555;
+   font-size: 0.9em;
+  line-height: 1.5;
+}
+
+/* =========================
+   FOOD
+========================= */
+
+.food-list {
+  list-style: none;
+  padding: 0;
+}
+
+.food-name {
+  font-weight: 500;
+  color: #2f5d50;
+}
+
+.food-category {
+  font-size: 0.92em; /* 👈 mantenuto */
+  color: #777;
+  margin-left: 6px;
+}
+
+.food-desc {
+  display: block;
+  color: #555;
+  margin-top: 3px;
+}
+
+.food-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 18px;
+}
+
+.food-card h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #2f5d50;
+  margin-bottom: 10px;
+}
+
+.food-card h2::before {
+  content: "🍷";
+  font-size: 20px;
+}
+
+/* LISTA */
+.food-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.food-list li {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.food-list li:last-child {
+  border-bottom: none;
+}
+
+/* NOME */
+.food-name {
+  font-weight: 600; /* 👈 più forte (prima si perdeva) */
+  color: #2f5d50;
+}
+
+/* CATEGORIA */
+.food-category {
+  font-size: 0.92em;
+  color: #777;
+  margin-left: 6px;
+}
+
+/* DESCRIZIONE */
+.food-desc {
+  display: block;
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+/* =========================
+   BACK TO TOP BUTTON
+========================= */
+
+.back-to-top {
+  position: fixed;
+  bottom: 170px; /* 👈 sopra contact box */
+  right: 20px;
+
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #8CBDAA;
+  color: white;
+
+  border-radius: 50%;
+  text-decoration: none;
+
+  font-size: 18px;
+  font-weight: bold;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  z-index: 1000;
+
+  opacity: 1;
+  pointer-events: auto;
+
+  transition: all 0.3s ease;
+}
+
+/* VISIBILE */
+.back-to-top.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* HOVER */
+.back-to-top:hover {
+  transform: translateY(-3px);
+  background: #7aa895;
+}
+   
+
+/* =========================
+   LINK ELEGANTE
+========================= */
+
+.link-elegante {
+  font-size: 0.82em; /* 👈 mantenuto */
+  color: #6b6b6b;
+  text-decoration: none;
+  position: relative;
+}
+
+.link-elegante::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 1px;
+  background-color: #2f5d50;
+  transition: width 0.25s ease;
+}
+
+.link-elegante:hover {
+  color: #2f5d50;
+}
+
+.link-elegante:hover::after {
+  width: 100%;
+}
+
+/* =========================
+   MOBILE OPTIMIZATION (FIXED)
+========================= */
+
+@media (max-width: 768px) {
+
+  /* CONTAINER (centra tutto davvero) */
+  .container {
+    padding: 20px 16px;
+  }
+
+  /* CARD - centrate e coerenti */
+  .card {
+    padding: 20px;
+    border-radius: 16px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* GRID e GALLERY */
+  .grid,
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  /* BOTTONI - NON DEVONO USCIRE DALLE CARD */
+  .button {
+    width: 100%;
+    max-width: 100%; /* 👈 evita overflow */
+    justify-content: center;
+    margin: 8px 0; /* 👈 spazio tra bottoni */
+    box-sizing: border-box;
+  }
+
+  /* se hai più bottoni uno sotto l’altro */
+  .button + .button {
+    margin-top: 10px; /* 👈 distanza verticale */
+  }
+
+  /* RISTORANTI */
+  .restaurant {
+    grid-template-columns: 1fr;
+  }
+
+  .restaurant img {
+    width: 100%;
+    height: 160px;
+  }
+
+  /* MAP */
+  .map {
+    height: 300px;
+  }
+
+  /* LOGO */
+  .logo {
+    width: 75%;
+  }
+
+  /* =========================
+     FOOD MOBILE FIX
+  ========================= */
+
+  .food-name {
+    display: block; /* 👈 forza a capo */
+    margin-bottom: 2px;
+  }
+
+  .food-category {
+    display: inline; /* resta accanto al nome */
+  }
+
+  .food-desc {
+    display: block;
+    margin-top: 6px; /* 👈 più respiro */
+  }
+
+  /* =========================
+     ATTIVITÀ 
+  ========================= */
+
+  .attivita-list li {
+    padding-left: 26px; /* 👈 meno invasivo */
+  }
+
+  .attivita-list li::before {
+    left: 0;
+    top: 16px; /* 👈 allineato meglio */
+    font-size: 12px;
+  }
+
+  .attivita-titolo {
+    display: block;
+    line-height: 1.4; /* 👈 evita sovrapposizioni */
+  }
+
+}
+  
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<img src="nuovo_logo.png" class="logo">
+
+
+
+<nav>
+<a href="#appartamento">Appartamenti</a>
+<a href="#servizi">Servizi</a>
+<a href="#turismo">Cosa vedere</a>
+<a href="#gastronomia">Cosa mangiare</a>
+<a href="#attivita">Sport</a>
+<a href="#prenota">Prenota</a>
+<a href="faq.html" target="_blank">FAQ</a> 
+</nav>
+
+<div id="google_translate_element"></div>
+
+</header>
+
+<div class="container">
+
+<!-- INTRO -->
+
+
+  
+  <div class="card">
+    <h2>Benvenuti a Fénis</h2>
+    <p>Goditi la tranquillità di un appartamento indipendente, curato nei dettagli e con tutti i comfort moderni, <b>a soli 2 minuti dal Castello di Fénis</b>, ideale per una vacanza rilassante nel cuore della Valle d'Aosta.
+      <br><br>
+      Perfetto per coppie, famiglie o smart working in montagna.
+      </p>
+
+    <p><b>✔ Posizione strategica<br>
+      ✔ Parcheggio privato gratuito<br>
+      ✔ Wi-Fi veloce e Smart TV<br>
+      ✔ Self check-in semplice</b></p>
+
+ <p>Rispondiamo entro pochi minuti (orario di assistenza dalle 8:00 alle 19:00).</p>
+    
+  <a class="button" href="#prenota">Prenota il tuo soggiorno</a>
+
+  <div class="button">
+  <span class="text">Chiedi info su:</span>
+
+   <div class="social-links">
+    <!-- WhatsApp -->
+    <a href="https://wa.me/393277817829?text=Buongiorno,__" target="_blank" title="Scrivi su WhatsApp">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="40" height="40">
+  <!-- vignetta con bordo bianco -->
+  <path 
+    d="M16 3C9.4 3 4 8.2 4 14.6c0 2.5.8 4.9 2.3 6.9L5 29l7.7-1.3c1.9 1 4.1 1.5 6.3 1.5 6.6 0 12-5.2 12-11.6S22.6 3 16 3z"
+    fill="#25D366"
+    stroke="#ffffff"
+    stroke-width="2"
+    stroke-linejoin="round"
+  />
+  
+  <!-- telefono -->
+  <path fill="#ffffff" d="M22.2 18.4c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.5-1.7-1.7-2-.2-.3 0-.5.2-.7.2-.2.3-.4.5-.6.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6 0-.2-.7-1.8-1-2.4-.3-.6-.6-.5-.8-.5h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 3s1.3 3.6 1.5 3.8c.2.2 2.6 4.2 6.5 5.9 1 .4 1.7.7 2.3.8 1 .2 1.9.2 2.6-.1.8-.2 2.3-1 2.6-1.9.3-.9.3-1.7.2-1.9-.1-.2-.3-.3-.6-.5z"/>
+</svg>
+    </a>
+
+    <!-- Telegram -->
+    <a href="https://t.me/bouceberio" target="_blank">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="40" height="40">
+  <!-- cerchio -->
+  <circle cx="120" cy="120" r="120" fill="#29A9EA"/>
+  
+  <!-- aeroplanino -->
+  <path fill="#ffffff" d="M180 72L62 118c-4 2-4 6 0 7l30 9 12 36c1 3 3 4 5 2l18-18 30 22c4 2 7 1 8-4l20-92c1-5-2-8-5-6z"/>
+  
+  <!-- dettaglio piega -->
+  <path fill="#dfefff" d="M104 140l4 28c1 3 2 3 4 1l10-10-18-19z"/>
+</svg>
+    </a>
+
+    <!-- Signal -->
+    <a href="https://signal.me/#p/+393277817829" target="_blank">
+     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
+
+  <!-- tratteggio esterno (stessa forma, scalata) -->
+  <path
+    d="M12 4c-4.3 0-7.8 3.2-7.8 7.2 0 1.8.7 3.5 2 4.8L5.5 20l3.9-1.2c1.1.4 2.3.6 3.5.6 4.3 0 7.8-3.2 7.8-7.2S16.3 4 12 4z"
+    fill="none"
+    stroke="#3A76F0"
+    stroke-width="1.5"
+    stroke-dasharray="2.5 2.5"
+    stroke-linejoin="round"
+    transform="scale(1.15) translate(-1.8 -1.8)"
+  />
+
+  <!-- vignetta con bordo bianco -->
+  <path
+    d="M12 4c-4.3 0-7.8 3.2-7.8 7.2 0 1.8.7 3.5 2 4.8L5.5 20l3.9-1.2c1.1.4 2.3.6 3.5.6 4.3 0 7.8-3.2 7.8-7.2S16.3 4 12 4z"
+    fill="#3A76F0"
+    stroke="#ffffff"
+    stroke-width="1.5"
+    stroke-linejoin="round"
+  />
+
+</svg>
+    </a>
+  </div>
+</div>
+  
+</div>
+
+<!-- APPARTAMENTI -->
+
+<div class="card" id="appartamento">
+  <h2>📸 Gli appartamenti</h2>
+  <p><i>Due appartamenti curati e indipendenti, pensati per offrire comfort, privacy e un'esperienza autentica in Valle d'Aosta.</i></p>  
+  
+  <p> Gli appartamenti sono di 43 mq l'uno, completi di bagno e cucina indipendente ed hanno ingresso in comune (separato rispetto al resto della casa di proprietà). L'ampio parcheggio privato antistante e la rampa di accesso rendono facile l'ingresso, anche con carrozzine. <br><br> 
+    Gli appartamenti sono forniti di Wi-Fi gratuito, Smart TV (con vari servizi streaming inclusi) e postazione da lavoro con scrivania e prese di alimentazione facilmente fruibili. La cucina è dotata di forno ventilato, microonde, piastra ad induzione, bollitore e macchinetta per il caffè in cialde. <br><br>
+    Ciascuno dei due appartamenti segue un distinto tema che ne caratterizza le tinte e la tipologia di finiture. 
+    </p> 
+  
+    <p> <b>Lo bouc</b> <br> 
+    Appartamento ispirato al bosco, con pavimenti e finiture in legno accompagnati da tinte verdeggianti, come le fronde delle conifere alpine. 
+    </p> 
+      <div class="gallery"> 
+        <img src="foto1.jpg"> 
+        <img src="foto2.jpg"> 
+      </div> 
+  
+    <p> <b>Lo berio</b> <br> 
+    Appartamento dedicato alle rocce che costituiscono le montagne nostrane, con pavimenti e finiture in pietra accompagnati da tinte blu e azzurre, come i tipici torrenti valdostani. 
+    </p> 
+      <div class="gallery"> 
+        <img src="foto3.jpg"> 
+        <img src="foto4.jpg"> 
+      </div> 
+</div>
+
+<!-- SERVIZI -->
+
+<div class="card" id="servizi">
+  <h2>Servizi e comfort</h2>
+    <div class="badge">Wi-Fi gratuito</div>
+    <div class="badge">Cucina attrezzata</div>
+    <div class="badge">Smart TV</div>
+    <div class="badge">Lavatrice e asciugatrice</div>
+    <div class="badge">Parcheggio privato gratuito</div>
+    <div class="badge">Self check-in</div>
+
+  <h3 style="margin-top:20px;">Servizi extra</h3> 
+    <div class="badge">Cesto colazione</div> 
+    <div class="badge">Lavanderia express</div> 
+    <div class="badge">Noleggio bici</div> 
+    <div class="badge">Officina e ricovero bici</div> 
+    <div class="badge">Deposito sci ed attrezzatura sportiva</div>
+</div>
+
+<!-- TURISMO -->
+
+<div class="card" id="turismo">
+  <h2>🗺️ Mappa della zona</h2> 
+  <iframe 
+    class="map" 
+    src="https://www.google.com/maps/d/embed?mid=1np416q6bCPl0fb9rB9HTNTN1yD6Q7xA&ehbc=2E312F">
+  </iframe> 
+</div>
+
+<div class="card">
+  <h2>🏰 Attrazioni vicino a Fénis</h2>
+  <div class="grid">
+
+    <div class="place-card">
+      <img src="castello-fenis.jpg">
+      <p><b>Castello di Fénis</b><br>
+      <a href="https://www.midaticket.it/eventi/castello-di-fenis/" target="_blank" class="link-elegante"> ↗ Vai al sito </a>
+      </p>
+    </div>
+
+    <div class="place-card">
+      <img src="mav-fenis.jpg"> 
+      <p><b>Museo dell'Artigianato Valdostano</b> (Fénis)<br>
+      <a href="https://lartisana.vda.it/cultura/mav/" target="_blank" class="link-elegante"> ↗ Vai al sito </a>
+      </p> 
+    </div> 
+  
+    <div class="place-card"> 
+      <img src="tsanti-fenis.jpg"> 
+      <p><b>Tsanti de Bouva</b> (Fénis)
+      <br>Area verde e pic-nic</p> 
+    </div> 
+  
+    <div class="place-card"> 
+      <img src="clavalite-fenis.jpg"> 
+      <p><b>Val Clavalité</b> (Fénis)
+      <br>Meta escursionistica</p> 
+    </div> 
+  
+    <div class="place-card"> 
+      <img src="miniere-stmarcel.jpg"> 
+      <p><b>Miniere di Saint Marcel</b>
+      (10 km)<br>
+      <a href="https://minieredisaintmarcel.it/" target="_blank" class="link-elegante"> ↗ Vai al sito </a></p> 
+    </div> 
+  
+    <div class="place-card"> 
+      <img src="acqueverdi-saintmacel.jpg"> 
+      <p><b>Eve Verta</b> (Saint Marcel, 10 km)
+      <br>Meta escursionistica</p> 
+    </div> 
+
+    <div class="place-card"> 
+      <img src="aosta.jpg"> 
+      <p><b>Città di Aosta</b> (15 km)</p> 
+    </div> 
+
+    <div class="place-card"> 
+      <img src="terme-vincent.jpg"> 
+      <p><b>Terme di Saint-Vincent</b> (15 km)<br>
+      <a href="https://laviadelleterme.it/terme-di-saint-vincent/" target="_blank" class="link-elegante"> ↗ Vai al sito </a></p> 
+    </div> 
+    
+    <div class="place-card"> 
+      <img src="osservatorio-nus.jpg"> 
+      <p><b>Osservatorio Astronomico Regionale</b> (Nus, 20 km)<br>
+      <a href="https://www.oavda.it/" target="_blank" class="link-elegante"> ↗ Vai al sito </a></p> 
+    </div> 
+
+    <div class="place-card"> 
+      <img src="forte-bard.jpg"> 
+      <p><b>Forte di Bard</b> (35 km)<br>
+      <a href="https://www.fortedibard.it/en/?gad_source=1&gad_campaignid=21215340462&gbraid=0AAAAA9hMbYW_WAXHgarfvImC-FnkMitba&gclid=Cj0KCQjws83OBhD4ARIsACblj19siyH7o1RjqeRHEFx0-3ri4OLCN524e0S5QZiBIAuP-OWy5KU8poIaAjstEALw_wcB" target="_blank" class="link-elegante"> ↗ Vai al sito </a></p> 
+    </div> 
+    
+    <div class="place-card"> 
+      <img src="gran-paradiso.jpg"> 
+      <p><b>Parco Nazionale Gran Paradiso</b> <br>(40 km)<br>
+      <a href="https://www.pngp.it/" target="_blank" class="link-elegante"> ↗ Vai al sito </a></p> 
+    </div> 
+
+    <div class="place-card"> 
+      <img src="terme-pre.jpg"> 
+      <p><b>Terme di Pré-Saint-Didider</b><br> (45 km)<br>
+      <a href="https://www.qcterme.com/it/destinazioni/pre-saint-didier/qc-spa-pre-saint-didier" target="_blank" class="link-elegante"> ↗ Vai al sito </a></p> 
+    </div> 
+    
+    <div class="place-card"> 
+      <img src="skyway.jpg"> 
+      <p><b>Skyway Monte Bianco</b> (Courmayeur, 50 km)<br>
+      <a href=https://www.montebianco.com/it?utm_source=google&utm_medium=cpc&utm_campaign=SEA-Zeppelin-IT-Brand&gad_source=1&gad_campaignid=23248248390&gbraid=0AAAAApBl3H0nbqAvp5uqfvtKTzD9N41wT&gclid=Cj0KCQjws83OBhD4ARIsACblj1_x1GZKh1yoaSQpds7ykm3Drv_3jrWcxUctFZ9_AWuBNv0CsZ3-kpQaAiZEEALw_wcB" target="_blank" class="link-elegante"> ↗ Vai al sito </a></p> 
+    </div> 
+  
+  </div> 
+</div>
+
+<!-- GASTRONOMIA --> 
+  
+<div class="card" id="gastronomia">   
+  <h2>🍝 Vivi la vera Valle d'Aosta</h2>
+
+<p>
+  A pochi minuti dagli appartamenti potrai scoprire ristoranti tipici, prodotti locali e sapori autentici.
+   </p>
+
+<p><b>I nostri preferiti:</b></p>
+
+<ul>
+<li><b>Le Foyer de Grand-Mère</b> – agriturismo</li>
+<li><b>Il Baron Goloso</b> – gelato artigianale</li>
+<li><b>MicaPan</b> – panificio artigianale</li>
+</ul>
+
+<p>Ti daremo consigli personalizzati durante il soggiorno 😊</p>
+</div>
+
+  
+ 
+  <div class="card attivita-card" id="attivita">
+    <h2>⛰️ Sport all'aria aperta</h2>
+
+    <p class="attivita-intro">
+  Scopri la Valle d’Aosta attraverso esperienze autentiche tra natura, sport e paesaggi unici. <br>
+      <b>Per i nostri ospiti sono disponibili, in loco, tracce GPX di percorsi ciclo-pedonali nei dintorni di Fénis.</b>
+</p>
+    
+    <ul class="attivita-list">
+      <li>
+        <span class="attivita-titolo">Trekking</span>
+        <span class="attivita-descrizione">
+          Sentieri panoramici per tutti i livelli tra boschi, alpeggi e viste spettacolari sulle montagne valdostane.
+        </span>
+      </li>
+
+      <li>
+        <span class="attivita-titolo">Mountain Bike (MTB)</span>
+        <span class="attivita-descrizione">
+          Percorsi che vanno dalle tranquille strade poderali fino ai trail tecnici e alle piste downhill attrezzate.
+        </span>
+      </li>
+
+      <li>
+        <span class="attivita-titolo">Pista ciclabile</span>
+        <span class="attivita-descrizione">
+          Tracciato immerso nella natura che collega Châtillon, Fénis e Aosta, ideale per famiglie e ciclisti.
+        </span>
+      </li>
+
+      <li>
+        <span class="attivita-titolo">Via Francigena</span>
+        <span class="attivita-descrizione">
+          Antico itinerario di pellegrinaggio tra cultura e natura, perfetto per cammini lenti e suggestivi.
+        </span>
+      </li>
+
+      <li>
+        <span class="attivita-titolo">Sci alpino</span>
+        <span class="attivita-descrizione">
+          Comprensori di fama internazionale come Cervinia, Pila, La Thuile e Courmayeur raggiungibili in breve tempo.
+        </span>
+      </li>
+
+      <li>
+        <span class="attivita-titolo">Sci di fondo</span>
+        <span class="attivita-descrizione">
+          Piste immerse nel silenzio della natura, ideali per uno sport completo e rilassante.
+        </span>
+      </li>
+
+      <li>
+        <span class="attivita-titolo">Ciaspolate</span>
+        <span class="attivita-descrizione">
+          Escursioni sulla neve tra boschi innevati e paesaggi incantati, adatte anche ai principianti.
+        </span>
+      </li>
+
+      <li>
+        <span class="attivita-titolo">Rafting</span>
+        <span class="attivita-descrizione">
+          Discese emozionanti lungo la Dora Baltea tra rapide e scenari spettacolari.
+        </span>
+      </li>
+      
+    </ul>
+    
+</div>
+ 
+  
+
+
+
+
+<!-- RECENSIONI -->
+  
+  <div class="card">
+
+<h2>⭐ Cosa dicono i nostri ospiti</h2>
+
+<p><b>★★★★★</b><br>
+“Appartamento bellissimo, pulizia impeccabile e posizione perfetta per visitare la valle. Torneremo sicuramente!”</p>
+
+<p><b>★★★★★</b><br>
+“Accoglienza fantastica e casa super curata. Ideale per una vacanza rilassante.”</p>
+
+<p><b>★★★★★</b><br>
+“Relax, comodità e comfort. Uno dei migliori soggiorni fatti in montagna.”</p>
+
+<p><b>Valutazione media: 5/5</b></p>
+
+</div>
+  
+  <!-- PRENOTA -->
+
+<div class="card" id="prenota">
+
+<h2>Prenota il tuo soggiorno</h2>
+
+<p><b>Disponibilità limitata nei weekend e nei periodi festivi.</b></p>
+
+<p>Contattaci direttamente per ricevere disponibilità e prezzi in pochi minuti.</p>
+
+<div class="button">
+  <span class="text">Prenota tramite:</span>
+
+ <div class="social-links">
+    <!-- WhatsApp -->
+    <a href="https://wa.me/393277817829?text=Buongiorno,%20vorrei%20sapere%20le%20disponibilità%20per%20le%20date%20dal%20__%20al%20__" target="_blank" title="Scrivi su WhatsApp">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="40" height="40">
+  <!-- vignetta con bordo bianco -->
+  <path 
+    d="M16 3C9.4 3 4 8.2 4 14.6c0 2.5.8 4.9 2.3 6.9L5 29l7.7-1.3c1.9 1 4.1 1.5 6.3 1.5 6.6 0 12-5.2 12-11.6S22.6 3 16 3z"
+    fill="#25D366"
+    stroke="#ffffff"
+    stroke-width="2"
+    stroke-linejoin="round"
+  />
+  
+  <!-- telefono -->
+  <path fill="#ffffff" d="M22.2 18.4c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.5-1.7-1.7-2-.2-.3 0-.5.2-.7.2-.2.3-.4.5-.6.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6 0-.2-.7-1.8-1-2.4-.3-.6-.6-.5-.8-.5h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 3s1.3 3.6 1.5 3.8c.2.2 2.6 4.2 6.5 5.9 1 .4 1.7.7 2.3.8 1 .2 1.9.2 2.6-.1.8-.2 2.3-1 2.6-1.9.3-.9.3-1.7.2-1.9-.1-.2-.3-.3-.6-.5z"/>
+</svg>
+    </a>
+
+    <!-- Telegram -->
+    <a href="https://t.me/bouceberio" target="_blank">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="40" height="40">
+  <!-- cerchio -->
+  <circle cx="120" cy="120" r="120" fill="#29A9EA"/>
+  
+  <!-- aeroplanino -->
+  <path fill="#ffffff" d="M180 72L62 118c-4 2-4 6 0 7l30 9 12 36c1 3 3 4 5 2l18-18 30 22c4 2 7 1 8-4l20-92c1-5-2-8-5-6z"/>
+  
+  <!-- dettaglio piega -->
+  <path fill="#dfefff" d="M104 140l4 28c1 3 2 3 4 1l10-10-18-19z"/>
+</svg>
+    </a>
+
+    <!-- Signal -->
+    <a href="https://signal.me/#p/+393277817829" target="_blank">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
+
+  <!-- tratteggio esterno (stessa forma, scalata) -->
+  <path
+    d="M12 4c-4.3 0-7.8 3.2-7.8 7.2 0 1.8.7 3.5 2 4.8L5.5 20l3.9-1.2c1.1.4 2.3.6 3.5.6 4.3 0 7.8-3.2 7.8-7.2S16.3 4 12 4z"
+    fill="none"
+    stroke="#3A76F0"
+    stroke-width="1.5"
+    stroke-dasharray="2.5 2.5"
+    stroke-linejoin="round"
+    transform="scale(1.15) translate(-1.8 -1.8)"
+  />
+
+  <!-- vignetta con bordo bianco -->
+  <path
+    d="M12 4c-4.3 0-7.8 3.2-7.8 7.2 0 1.8.7 3.5 2 4.8L5.5 20l3.9-1.2c1.1.4 2.3.6 3.5.6 4.3 0 7.8-3.2 7.8-7.2S16.3 4 12 4z"
+    fill="#3A76F0"
+    stroke="#ffffff"
+    stroke-width="1.5"
+    stroke-linejoin="round"
+  />
+
+</svg>
+    </a>
+  </div>
+</div>
+
+<a class="button" href="https://app.smoobu.com/booking/tuo-link" target="_blank">Prenota direttamente dal sito</a>
+  
+<p style="font-size:14px; opacity:0.8;">
+Nessun costo di intermediazione prenotando direttamente. Sconti disponibili per soggiorni infrasettimanali.
+  <br>
+ <br> Oppure:
+</p>
+<a class="button" href="#" target="_blank">Prenota su Airbnb</a>
+
+<a class="button" href="#" target="_blank">Prenota su Booking</a> 
+
+<a class="button" href="#" target="_blank">Prenota su Vrbo</a>  
+<p>
+Hai dubbi? 👉 <a href="faq.html" target="_blank">Consulta le FAQ</a>
+</p>
+</div>
+  
+ 
+
+</div>
+
+<footer>
+<p><p>
+Appartamenti vacanze a Fénis, vicino al Castello di Fénis, ideali per visitare la Valle d'Aosta e soggiornare in una posizione tranquilla e strategica.
+</p></p>
+  <a href="faq.html" target="_blank">Domande frequenti</a>
+</footer>
+
+
+  <div class="contact-box">
+  <span class="label">💬 Scrivici</span>
+
+  <div class="social-links">
+    <!-- WhatsApp -->
+    <a href="https://wa.me/393277817829?text=Buongiorno,__" target="_blank">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="40" height="40">
+  <!-- vignetta con bordo bianco -->
+  <path 
+    d="M16 3C9.4 3 4 8.2 4 14.6c0 2.5.8 4.9 2.3 6.9L5 29l7.7-1.3c1.9 1 4.1 1.5 6.3 1.5 6.6 0 12-5.2 12-11.6S22.6 3 16 3z"
+    fill="#25D366"
+    stroke="#ffffff"
+    stroke-width="2"
+    stroke-linejoin="round"
+  />
+  
+  <!-- telefono -->
+  <path fill="#ffffff" d="M22.2 18.4c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.5-1.7-1.7-2-.2-.3 0-.5.2-.7.2-.2.3-.4.5-.6.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6 0-.2-.7-1.8-1-2.4-.3-.6-.6-.5-.8-.5h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 3s1.3 3.6 1.5 3.8c.2.2 2.6 4.2 6.5 5.9 1 .4 1.7.7 2.3.8 1 .2 1.9.2 2.6-.1.8-.2 2.3-1 2.6-1.9.3-.9.3-1.7.2-1.9-.1-.2-.3-.3-.6-.5z"/>
+</svg>
+    </a>
+
+    <!-- Telegram -->
+    <a href="https://t.me/bouceberio" target="_blank">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="40" height="40">
+  <!-- cerchio -->
+  <circle cx="120" cy="120" r="120" fill="#29A9EA"/>
+  
+  <!-- aeroplanino -->
+  <path fill="#ffffff" d="M180 72L62 118c-4 2-4 6 0 7l30 9 12 36c1 3 3 4 5 2l18-18 30 22c4 2 7 1 8-4l20-92c1-5-2-8-5-6z"/>
+  
+  <!-- dettaglio piega -->
+  <path fill="#dfefff" d="M104 140l4 28c1 3 2 3 4 1l10-10-18-19z"/>
+</svg>
+    </a>
+
+    <!-- Signal -->
+    <a href="https://signal.me/#p/+393277817829" target="_blank">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
+
+  <!-- tratteggio esterno (stessa forma, scalata) -->
+  <path
+    d="M12 4c-4.3 0-7.8 3.2-7.8 7.2 0 1.8.7 3.5 2 4.8L5.5 20l3.9-1.2c1.1.4 2.3.6 3.5.6 4.3 0 7.8-3.2 7.8-7.2S16.3 4 12 4z"
+    fill="none"
+    stroke="#3A76F0"
+    stroke-width="1.5"
+    stroke-dasharray="2.5 2.5"
+    stroke-linejoin="round"
+    transform="scale(1.15) translate(-1.8 -1.8)"
+  />
+
+  <!-- vignetta con bordo bianco -->
+  <path
+    d="M12 4c-4.3 0-7.8 3.2-7.8 7.2 0 1.8.7 3.5 2 4.8L5.5 20l3.9-1.2c1.1.4 2.3.6 3.5.6 4.3 0 7.8-3.2 7.8-7.2S16.3 4 12 4z"
+    fill="#3A76F0"
+    stroke="#ffffff"
+    stroke-width="1.5"
+    stroke-linejoin="round"
+  />
+
+</svg>
+    </a>
+  </div>
+</div>
+
+<a class="prenota-float" href="#prenota">
+📅 Prenota ora
+</a>
+
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    {
+      pageLanguage: 'it',
+      includedLanguages: 'en,fr,de,nl,zh-CN,ru,ja'
+    },
+    'google_translate_element'
+  );
+}
+</script>
+
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const backToTop = document.querySelector(".back-to-top");
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 200) {
+      backToTop.classList.add("show");
+    } else {
+      backToTop.classList.remove("show");
+    }
+  });
+});
+</script>
+
+<a href="#" class="back-to-top" aria-label="Torna su">
+  ↑
+</a>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

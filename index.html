@@ -26,44 +26,58 @@
 <link rel="icon" href="favicon.png" type="image/png">
 <style>
 
-/* BASE */
+/* =========================
+   BASE
+========================= */
 
-body{
-font-family:'Inter', sans-serif;
-margin:0;
-color:#333;
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  color: #333;
 
-background: linear-gradient(
-  to bottom,
-  #bcd8cc 0%,
-  #8fb3a3 30%,
-  #d6cec2 70%,
-  #b8aea0 100%
-);
+  font-size: 0.92em; /* 👈 FONT UNIFICATO */
 
-background-attachment: fixed;
+  background: linear-gradient(
+    to bottom,
+    #bcd8cc 0%,
+    #8fb3a3 30%,
+    #d6cec2 70%,
+    #b8aea0 100%
+  );
+  background-attachment: fixed;
+   
+   -webkit-tap-highlight-color: transparent;
+
 }
 
-h1, h2, h3{
-font-family:'Playfair Display', serif;
-letter-spacing:0.5px;
-}
-  
-/* HEADER */
-
-header{
-background:
-linear-gradient(rgba(9, 9, 9, 1), rgba(20,40,35,0.55)),
-url('header_transparent.png') center bottom/contain no-repeat;
-
-width:100%;
-display:flex;
-flex-direction:column;
-justify-content:center;
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.5px;
 }
 
+h2 {
+  font-size: 1.4em; /* mantiene gerarchia */
+}
 
-/* NAV */
+/* =========================
+   HEADER
+========================= */
+
+header {
+  background:
+    linear-gradient(rgba(9, 9, 9, 1), rgba(20,40,35,0.55)),
+    url('header_transparent.png') center bottom/contain no-repeat;
+
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* =========================
+   NAV
+========================= */
+
 nav {
   display: flex;
   gap: 10px;
@@ -74,130 +88,132 @@ nav {
 
 nav a {
   text-decoration: none;
-  font-size: 14px;
-  /* font-weight: bold; */
-  color: #f5f5f5; /* 👈 testo chiaro */
+  color: #f5f5f5;
   text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+
   background: rgba(140, 189, 170, 0.5);
   backdrop-filter: blur(8px);
 
-  padding: 10px 18px; /* leggermente più grande */
+  padding: 10px 18px;
   border-radius: 20px;
 
   display: inline-flex;
   align-items: center;
   justify-content: center;
 
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* stesso effetto */
-
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   transition: all 0.3s ease;
 }
 
-/* HOVER */
 nav a:hover {
   transform: translateY(-2px);
-  background: #7aa895; /* leggermente più scuro */
+  background: #7aa895;
 }
 
-/* TRADUTTORE PULITO */
+/* =========================
+   TRADUTTORE
+========================= */
 
-#google_translate_element{
-margin-top:15px;
-text-align:center;
+#google_translate_element {
+  margin-top: 15px;
+  text-align: center;
 }
 
-.goog-logo-link {
-display:none !important;
-}
-
+.goog-logo-link,
 .goog-te-gadget span {
-display:none !important;
+  display: none !important;
 }
 
 .goog-te-gadget {
-color:transparent !important;
+  color: transparent !important;
 }
 
-.goog-te-gadget select{
-padding:6px 10px;
-border-radius:8px;
-border:none;
-font-size:14px;
+.goog-te-gadget select {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: none;
 }
 
-/* CONTAINER */
+/* =========================
+   LAYOUT
+========================= */
 
-.container{
-max-width:1000px;
-margin:2px auto;
-padding:30px 20px;
+.container {
+  max-width: 1000px;
+  margin: 2px auto;
+  padding: 30px 20px;
 }
 
-/* CARD */
+/* =========================
+   CARD
+========================= */
 
-.card{
-background:rgba(255,255,255,0.88);
-padding:26px;
-margin-bottom:26px;
-border-radius:20px;
-box-shadow:0 12px 35px rgba(0,0,0,0.08);
-backdrop-filter: blur(6px);
-transition:0.3s;
+.card {
+  background: rgba(255,255,255,0.88);
+  padding: 26px;
+  margin-bottom: 26px;
+
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+  backdrop-filter: blur(6px);
+
+  transition: 0.3s;
 }
 
-.card:hover{
-transform:translateY(-4px);
-box-shadow:0 14px 32px rgba(0,0,0,0.12);
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(0,0,0,0.12);
 }
 
-/* GALLERY */
-
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:12px;
+.card p {
+  margin-bottom: 10px;
 }
 
-img{
-width:100%;
-border-radius:12px;
-transition:0.3s;
+/* =========================
+   GALLERY
+========================= */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 12px;
 }
 
-img:hover{
-transform:scale(1.03);
+img {
+  width: 100%;
+  border-radius: 12px;
+  transition: 0.3s;
 }
 
-/* BUTTON */
+img:hover {
+  transform: scale(1.03);
+}
+
+/* =========================
+   BUTTON
+========================= */
 
 .button {
   display: inline-flex;
   align-items: center;
   gap: 10px;
+
   background: #2f5d50;
   color: white;
+
   padding: 12px 22px;
-  text-decoration:none;
-  border-radius:30px;
-  margin:6px 4px;
-  font-size:15px;
-  font-weight:500;
-  transition:0.3s;
-  box-shadow:0 4px 12px rgba(0,0,0,0.15);
-  }
+  border-radius: 30px;
 
-  .button:hover{
-background:#1f3f35;
-transform:translateY(-2px);
-}
-  
-.button .icons {
-  display: flex;
-  gap: 8px;
+  text-decoration: none;
+  font-weight: 500;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: 0.3s;
 }
 
-.button a {
-  display: flex;
+.button:hover {
+  background: #1f3f35;
+  transform: translateY(-2px);
 }
 
 .button svg {
@@ -209,78 +225,93 @@ transform:translateY(-2px);
 .button svg:hover {
   transform: scale(1.15);
 }
-  
-/* BADGE */
 
-.badge{
-background:#e3efe9;
-color:#2f5d50;
-padding:8px 14px;
-border-radius:20px;
-display:inline-block;
-margin:4px;
-font-size:13px;
+/* =========================
+   BADGE
+========================= */
+
+.badge {
+  background: #e3efe9;
+  color: #2f5d50;
+
+  padding: 8px 14px;
+  border-radius: 20px;
+
+  display: inline-block;
+  margin: 4px;
+
+  font-size: 0.9em;
 }
 
-/* GRID */
+/* =========================
+   GRID
+========================= */
 
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:16px;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+  gap: 16px;
 }
 
-.place-card{
-background:#f9fbfd;
-padding:10px;
-border-radius:10px;
+.place-card {
+  background: #f9fbfd;
+  padding: 10px;
+  border-radius: 10px;
 }
 
-/* MAP */
+/* =========================
+   MAP
+========================= */
 
-.map{
-width:100%;
-height:380px;
-border:0;
-border-radius:12px;
+.map {
+  width: 100%;
+  height: 380px;
+  border: 0;
+  border-radius: 12px;
 }
 
-/* RISTORANTI */
+/* =========================
+   RISTORANTI
+========================= */
 
-.restaurant{
-display:grid;
-grid-template-columns:110px 1fr;
-gap:12px;
-margin-bottom:14px;
+.restaurant {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 12px;
+  margin-bottom: 14px;
 }
 
-.restaurant img{
-width:110px;
-height:90px;
-object-fit:cover;
+.restaurant img {
+  width: 110px;
+  height: 90px;
+  object-fit: cover;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER (DISCLAIMER STYLE)
+========================= */
 
-footer{
-text-align:center;
-padding:30px;
-font-size:14px;
-color:#777;
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #777;
+  font-size: 0.8em; /* 👈 più piccolo */
+  line-height: 1.4;
 }
 
-/* CONTACT BOX */
+/* =========================
+   CONTACT BOX
+========================= */
 
 .contact-box {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  
-  background: #8CBDAA; /* pieno, niente trasparenza */
-  color: #f5f5f5; /* testo chiaro */
+
+  background: #8CBDAA;
+  color: #f5f5f5;
 
   padding: 12px 16px;
-  border: 1px solid rgba(255,255,255,0.2);
   border-radius: 20px;
 
   display: flex;
@@ -288,137 +319,111 @@ color:#777;
   align-items: center;
   gap: 10px;
 
-  box-shadow: 0 6px 18px rgba(0,0,0,0.25); /* più morbida e moderna */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
   z-index: 1000;
-
-  font-weight: 500; /* più leggibile di 300 */
 }
 
-/* LABEL */
 .contact-box .label {
-  font-size: 15px;
-  font-weight: 600; /* leggermente più importante */
-  text-align: center;
+  font-weight: 600;
 }
 
-/* ICONS CONTAINER */
-.icons {
-  display: flex;
-  gap: 14px;
-}
-
-/* ICONE */
 .contact-box svg {
   width: 28px;
   height: 28px;
+  fill: #f5f5f5;
 
-  fill: #f5f5f5; /* 👈 icone chiare */
-
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  transition: 0.2s;
 }
 
-/* HOVER */
 .contact-box svg:hover {
   transform: scale(1.15);
   opacity: 0.85;
 }
 
-/* PRENOTA SUBITO */
+/* =========================
+   SOCIAL LINKS
+========================= */
 
-.prenota-float{
-position:fixed;
-bottom:120px;
-right:20px;
-
-background:#2f5d50;
-color:white;
-padding:12px 16px;
-border-radius:30px;
-font-size:14px;
-text-decoration:none;
-
-box-shadow:0 4px 12px rgba(0,0,0,0.25);
-z-index:1000;
-
-/* animazioni */
-animation:
-fadeInUp 0.6s ease,
-pulseSoft 4s 1s infinite;
-
-transition:0.3s;
+.social-links {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  gap: 10px !important; /* 👈 forza distanza */
 }
 
-/* HOVER */
-.prenota-float:hover{
-background:#1f3f35;
-transform:translateY(-3px) scale(1.05);
-box-shadow:0 8px 18px rgba(0,0,0,0.35);
-
-/* ferma animazione */
-animation:none;
+.social-links svg {
+  width: 28px;
+  height: 28px;
+  filter: drop-shadow(0 2px 3px rgba(0,0,0,0.2));
+  transition: transform 0.2s ease;
 }
 
-/* ENTRATA */
-@keyframes fadeInUp{
-from{
-opacity:0;
-transform:translateY(20px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
+.social-links svg:hover {
+  transform: scale(1.1);
+   transition: 0.2s;
 }
 
-/* PULSE */
+/* =========================
+   PRENOTA FLOAT
+========================= */
+
+.prenota-float {
+  position: fixed;
+  bottom: 120px;
+  right: 20px;
+
+  background: #2f5d50;
+  color: white;
+
+  padding: 12px 16px;
+  border-radius: 30px;
+
+  text-decoration: none;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  z-index: 1000;
+
+  animation: fadeInUp 0.6s ease, pulseSoft 4s 1s infinite;
+}
+
+.prenota-float:hover {
+  background: #1f3f35;
+  transform: translateY(-3px) scale(1.05);
+  animation: none;
+}
+
+/* =========================
+   ANIMAZIONI
+========================= */
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 @keyframes pulseSoft {
-0%{
-transform:scale(1);
-box-shadow:0 4px 12px rgba(0,0,0,0.25);
-}
-50%{
-transform:scale(1.05);
-box-shadow:0 8px 20px rgba(0,0,0,0.35);
-}
-100%{
-transform:scale(1);
-box-shadow:0 4px 12px rgba(0,0,0,0.25);
-}
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
 }
 
-  /* LOGO */
- .logo {
+/* =========================
+   LOGO
+========================= */
+
+.logo {
   width: 33%;
   max-width: 1536px;
-  height: auto;
-  object-fit: contain;
   display: block;
   margin: 0 auto;
 }
 
-/* MOBILE */
 @media (max-width: 768px) {
-  .logo {
-    width: 70%;
-  }
+  .logo { width: 70%; }
 }
 
-/* SOCIAL LINK */
-  .social-links {
-  display: flex;
-  gap: 60px; 
-}
-  .social-links svg {
-  filter: drop-shadow(0 2px 3px rgba(0,0,0,0.2));
-  width: 36px;
-  height: 36px;
-}
-  .social-links svg:hover {
-  transform: scale(1.1);
-  transition: 0.2s;
-}
-
-/* LISTA ATTIVITÀ */
+/* =========================
+   LISTE ATTIVITÀ
+========================= */
 
 .attivita-list {
   list-style: none;
@@ -427,43 +432,20 @@ box-shadow:0 4px 12px rgba(0,0,0,0.25);
 }
 
 .attivita-list li {
-  padding: 14px 0;
+  padding: 14px 0 14px 30px;
   border-bottom: 1px solid rgba(0,0,0,0.08);
   position: relative;
-  padding-left: 30px;
 }
 
-.attivita-list li:last-child {
-  border-bottom: none;
-}
-
-/* ❄️ Fiocco di neve */
 .attivita-list li::before {
   content: "❄";
-  color: #7daea3;
   position: absolute;
   left: 0;
   top: 14px;
-  font-size: 14px;
+  color: #7daea3;
 }
 
-/* Titolo attività */
-.attivita-titolo {
-  color: #2f5d50;
-  font-weight: 600;
-  font-size: 1.05em;
-  display: block;
-  margin-bottom: 4px;
-}
 
-/* Descrizione */
-.attivita-descrizione {
-  font-size: 0.95em;
-  line-height: 1.5;
-  color: #555;
-}
-
-/* Titolo sezione con icona */
 .attivita-card h2 {
   color: #2f5d50;
   margin-bottom: 10px;
@@ -472,26 +454,167 @@ box-shadow:0 4px 12px rgba(0,0,0,0.25);
   gap: 8px;
 }
 
-  .attivita-intro {
-  color: #3f6f63;       /* verde alpino più soft del titolo */
-  font-size: 0.9em;    /* leggermente più piccolo dei titoli */
+.attivita-intro {
+  color: #3f6f63;
+  font-size: 0.9em;
   line-height: 1.5;
   margin: 10px 0 15px 0;
 }
 
-/* VAI AL SITO */
-  .link-elegante {
-  font-size: 0.85em;
+.attivita-titolo {
+  color: #2f5d50;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.attivita-descrizione {
+  color: #555;
+   font-size: 0.9em;
+  line-height: 1.5;
+}
+
+/* =========================
+   FOOD
+========================= */
+
+.food-list {
+  list-style: none;
+  padding: 0;
+}
+
+.food-name {
+  font-weight: 500;
+  color: #2f5d50;
+}
+
+.food-category {
+  font-size: 0.92em; /* 👈 mantenuto */
+  color: #777;
+  margin-left: 6px;
+}
+
+.food-desc {
+  display: block;
+  color: #555;
+  margin-top: 3px;
+}
+
+.food-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 18px;
+}
+
+.food-card h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #2f5d50;
+  margin-bottom: 10px;
+}
+
+.food-card h2::before {
+  content: "🍷";
+  font-size: 20px;
+}
+
+/* LISTA */
+.food-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.food-list li {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.food-list li:last-child {
+  border-bottom: none;
+}
+
+/* NOME */
+.food-name {
+  font-weight: 600; /* 👈 più forte (prima si perdeva) */
+  color: #2f5d50;
+}
+
+/* CATEGORIA */
+.food-category {
+  font-size: 0.92em;
+  color: #777;
+  margin-left: 6px;
+}
+
+/* DESCRIZIONE */
+.food-desc {
+  display: block;
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+/* =========================
+   BACK TO TOP BUTTON
+========================= */
+
+.back-to-top {
+  position: fixed;
+  bottom: 185px; /* 👈 sopra contact box */
+  right: 20px;
+
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #8CBDAA;
+  color: white;
+
+  border-radius: 50%;
+  text-decoration: none;
+
+  font-size: 18px;
+  font-weight: bold;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  z-index: 1000;
+
+  opacity: 1;
+  pointer-events: auto;
+
+  transition: all 0.3s ease;
+}
+
+/* VISIBILE */
+.back-to-top.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* HOVER */
+.back-to-top:hover {
+  transform: translateY(-3px);
+  background: #7aa895;
+}
+   
+
+/* =========================
+   LINK ELEGANTE
+========================= */
+
+.link-elegante {
+  font-size: 0.82em; /* 👈 mantenuto */
   color: #6b6b6b;
   text-decoration: none;
   position: relative;
-  display: inline-block;
-  margin-top: 6px;
-  letter-spacing: 0.3px;
-  transition: color 0.25s ease;
 }
 
-/* linea sottile animata */
 .link-elegante::after {
   content: "";
   position: absolute;
@@ -510,6 +633,104 @@ box-shadow:0 4px 12px rgba(0,0,0,0.25);
 .link-elegante:hover::after {
   width: 100%;
 }
+
+/* =========================
+   MOBILE OPTIMIZATION (FIXED)
+========================= */
+
+@media (max-width: 768px) {
+
+  /* CONTAINER (centra tutto davvero) */
+  .container {
+    padding: 20px 16px;
+  }
+
+  /* CARD - centrate e coerenti */
+  .card {
+    padding: 20px;
+    border-radius: 16px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* GRID e GALLERY */
+  .grid,
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  /* BOTTONI - NON DEVONO USCIRE DALLE CARD */
+  .button {
+    width: 100%;
+    max-width: 100%; /* 👈 evita overflow */
+    justify-content: center;
+    margin: 8px 0; /* 👈 spazio tra bottoni */
+    box-sizing: border-box;
+  }
+
+  /* se hai più bottoni uno sotto l’altro */
+  .button + .button {
+    margin-top: 10px; /* 👈 distanza verticale */
+  }
+
+  /* RISTORANTI */
+  .restaurant {
+    grid-template-columns: 1fr;
+  }
+
+  .restaurant img {
+    width: 100%;
+    height: 160px;
+  }
+
+  /* MAP */
+  .map {
+    height: 300px;
+  }
+
+  /* LOGO */
+  .logo {
+    width: 75%;
+  }
+
+  /* =========================
+     FOOD MOBILE FIX
+  ========================= */
+
+  .food-name {
+    display: block; /* 👈 forza a capo */
+    margin-bottom: 2px;
+  }
+
+  .food-category {
+    display: inline; /* resta accanto al nome */
+  }
+
+  .food-desc {
+    display: block;
+    margin-top: 6px; /* 👈 più respiro */
+  }
+
+  /* =========================
+     ATTIVITÀ 
+  ========================= */
+
+  .attivita-list li {
+    padding-left: 26px; /* 👈 meno invasivo */
+  }
+
+  .attivita-list li::before {
+    left: 0;
+    top: 16px; /* 👈 allineato meglio */
+    font-size: 12px;
+  }
+
+  .attivita-titolo {
+    display: block;
+    line-height: 1.4; /* 👈 evita sovrapposizioni */
+  }
+
+}
   
 </style>
 
@@ -527,7 +748,8 @@ box-shadow:0 4px 12px rgba(0,0,0,0.25);
 <a href="#appartamento">Appartamenti</a>
 <a href="#servizi">Servizi</a>
 <a href="#turismo">Cosa vedere</a>
-<a href="#gastronomia">Consigli enogastronomici</a>
+<a href="#gastronomia">Cosa mangiare</a>
+<a href="#attivita">Sport</a>
 <a href="#prenota">Prenota</a>
 <a href="faq.html" target="_blank">FAQ</a> 
 </nav>
@@ -561,7 +783,7 @@ box-shadow:0 4px 12px rgba(0,0,0,0.25);
   <div class="button">
   <span class="text">Chiedi info su:</span>
 
-  <div class="icons">
+   <div class="social-links">
     <!-- WhatsApp -->
     <a href="https://wa.me/393277817829?text=Buongiorno,__" target="_blank" title="Scrivi su WhatsApp">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="40" height="40">
@@ -674,6 +896,14 @@ box-shadow:0 4px 12px rgba(0,0,0,0.25);
 <!-- TURISMO -->
 
 <div class="card" id="turismo">
+  <h2>🗺️ Mappa della zona</h2> 
+  <iframe 
+    class="map" 
+    src="https://www.google.com/maps/d/embed?mid=1np416q6bCPl0fb9rB9HTNTN1yD6Q7xA&ehbc=2E312F">
+  </iframe> 
+</div>
+
+<div class="card">
   <h2>🏰 Attrazioni vicino a Fénis</h2>
   <div class="grid">
 
@@ -757,13 +987,33 @@ box-shadow:0 4px 12px rgba(0,0,0,0.25);
       <a href=https://www.montebianco.com/it?utm_source=google&utm_medium=cpc&utm_campaign=SEA-Zeppelin-IT-Brand&gad_source=1&gad_campaignid=23248248390&gbraid=0AAAAApBl3H0nbqAvp5uqfvtKTzD9N41wT&gclid=Cj0KCQjws83OBhD4ARIsACblj1_x1GZKh1yoaSQpds7ykm3Drv_3jrWcxUctFZ9_AWuBNv0CsZ3-kpQaAiZEEALw_wcB" target="_blank" class="link-elegante"> ↗ Vai al sito </a></p> 
     </div> 
   
-    
   </div> 
 </div>
+
+<!-- GASTRONOMIA --> 
+  
+<div class="card" id="gastronomia">   
+  <h2>🍝 Vivi la vera Valle d'Aosta</h2>
+
+<p>
+  A pochi minuti dagli appartamenti potrai scoprire ristoranti tipici, prodotti locali e sapori autentici.
+   </p>
+
+<p><b>I nostri preferiti:</b></p>
+
+<ul>
+<li><b>Le Foyer de Grand-Mère</b> – agriturismo</li>
+<li><b>Il Baron Goloso</b> – gelato artigianale</li>
+<li><b>MicaPan</b> – panificio artigianale</li>
+</ul>
+
+<p>Ti daremo consigli personalizzati durante il soggiorno 😊</p>
+</div>
+
   
  
-  <div class="card attivita-card">
-    <h2>⛰️ Adrenalina e sport all'aria aperta</h2>
+  <div class="card attivita-card" id="attivita">
+    <h2>⛰️ Sport all'aria aperta</h2>
 
     <p class="attivita-intro">
   Scopri la Valle d’Aosta attraverso esperienze autentiche tra natura, sport e paesaggi unici. <br>
@@ -832,33 +1082,9 @@ box-shadow:0 4px 12px rgba(0,0,0,0.25);
 </div>
  
   
-<div class="card"> 
-  <h2>🗺️ Mappa della zona</h2> 
-  <iframe 
-    class="map" 
-    src="https://www.google.com/maps/d/embed?mid=1np416q6bCPl0fb9rB9HTNTN1yD6Q7xA&ehbc=2E312F">
-  </iframe> 
-</div>
 
-<!-- GASTRONOMIA --> 
-  
-<div class="card" id="gastronomia">   
-  <h2>🍝 Vivi la vera Valle d'Aosta</h2>
 
-<p>
-  A pochi minuti dagli appartamenti potrai scoprire ristoranti tipici, prodotti locali e sapori autentici.
-   </p>
 
-<p><b>I nostri preferiti:</b></p>
-
-<ul>
-<li><b>Le Foyer de Grand-Mère</b> – agriturismo</li>
-<li><b>Il Baron Goloso</b> – gelato artigianale</li>
-<li><b>MicaPan</b> – panificio artigianale</li>
-</ul>
-
-<p>Ti daremo consigli personalizzati durante il soggiorno 😊</p>
-</div>
 
 <!-- RECENSIONI -->
   
@@ -892,7 +1118,7 @@ box-shadow:0 4px 12px rgba(0,0,0,0.25);
 <div class="button">
   <span class="text">Prenota tramite:</span>
 
-  <div class="icons">
+ <div class="social-links">
     <!-- WhatsApp -->
     <a href="https://wa.me/393277817829?text=Buongiorno,%20vorrei%20sapere%20le%20disponibilità%20per%20le%20date%20dal%20__%20al%20__" target="_blank" title="Scrivi su WhatsApp">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="40" height="40">
@@ -985,7 +1211,7 @@ Appartamenti vacanze a Fénis, vicino al Castello di Fénis, ideali per visitare
   <div class="contact-box">
   <span class="label">💬 Scrivici</span>
 
-  <div class="icons">
+  <div class="social-links">
     <!-- WhatsApp -->
     <a href="https://wa.me/393277817829?text=Buongiorno,__" target="_blank">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="40" height="40">
@@ -1064,8 +1290,41 @@ function googleTranslateElementInit() {
 
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const backToTop = document.querySelector(".back-to-top");
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 200) {
+      backToTop.classList.add("show");
+    } else {
+      backToTop.classList.remove("show");
+    }
+  });
+});
+</script>
+
+<a href="#" class="back-to-top" aria-label="Torna su">
+  ↑
+</a>
+
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

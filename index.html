@@ -196,13 +196,20 @@ img:hover {
 .button {
   display: inline-flex;
   align-items: center;
-  gap: 8px; /* leggermente più compatto */
-  line-height: 1.2; /* 👈 evita stretching */
-}
+  gap: 10px;
 
   background: #2f5d50;
   color: white;
- 
+
+  padding: 12px 22px;
+  border-radius: 30px;
+
+  text-decoration: none;
+  font-weight: 500;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: 0.3s;
+}
 
 .button:hover {
   background: #1f3f35;
@@ -210,9 +217,9 @@ img:hover {
 }
 
 .button svg {
-  width: 16px;   /* 👈 più piccole */
+  width: 16px;
   height: 16px;
-  display: block;
+  transition: transform 0.2s ease;
 }
 
 .button svg:hover {
@@ -362,7 +369,7 @@ footer {
 
 .prenota-float {
   position: fixed;
-  bottom: 120px;
+  bottom: 115px;
   right: 20px;
 
   background: #2f5d50;

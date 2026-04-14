@@ -11,238 +11,221 @@
 <link rel="icon" href="favicon.png" type="image/png">
 <style>
 
-/* HEADER */
+/* =========================
+   BASE
+========================= */
 
-header{
-background:
-linear-gradient(rgba(9, 9, 9, 1), rgba(20,40,35,0.55)),
-url('header_transparent.png') center bottom/contain no-repeat;
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  color: #333;
+  font-size: 0.92em;
 
-width:100%;
-display:flex;
-flex-direction:column;
-justify-content:center;
+  background: linear-gradient(
+    to bottom,
+    #bcd8cc 0%,
+    #8fb3a3 30%,
+    #d6cec2 70%,
+    #b8aea0 100%
+  );
+
+  background-attachment: fixed;
+  -webkit-tap-highlight-color: transparent;
 }
 
-  
-  /* BASE */
-
-body{
-font-family:'Inter', sans-serif;
-margin:0;
-color:#333;
-font-size: 0.92em;
-
-background: linear-gradient(
-  to bottom,
-  #bcd8cc 0%,
-  #8fb3a3 30%,
-  #d6cec2 70%,
-  #b8aea0 100%
-);
-
-background-attachment: fixed;
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.5px;
 }
 
-h1, h2{
-font-family:'Playfair Display', serif;
-text-align:center;
+h1 {
+  text-align: center;
 }
 
-/* CONTAINER */
-
-.container{
-max-width:800px;
-margin:2px auto;
-padding:20px;
-position:relative;
+h2 {
+  font-size: 1.4em;
 }
 
-/* CARD */
+/* =========================
+   HEADER
+========================= */
 
-.card{
-background:rgba(255,255,255,0.9);
-padding:24px;
-border-radius:16px;
-box-shadow:0 10px 28px rgba(0,0,0,0.1);
-margin-bottom:16px;
-}
+header {
+  background:
+    linear-gradient(rgba(9, 9, 9, 1), rgba(20,40,35,0.55)),
+    url('header_transparent.png') center bottom/contain no-repeat;
 
-/* FAQ */
-
-.faq-item{
-margin-bottom:12px;
-border-radius:12px;
-overflow:hidden;
-}
-
-.faq-question{
-background:#2f5d50;
-color:white;
-padding:14px;
-cursor:pointer;
-font-weight:500;
-}
-
-.faq-answer{
-display:none;
-padding:14px;
-background:#f7f7f7;
-}
-
-/* CTA */
-
-.cta{
-text-align:center;
-margin-top:30px;
-}
-
-/* BUTTON */
-
-.button {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: #2f5d50;
-  color: white;
-  padding: 13px 22px;
-  text-decoration:none;
-  border-radius:30px;
-  margin:6px 4px;
-  font-size:15px;
-  font-weight:500;
-  transition:0.3s;
-  box-shadow:0 4px 12px rgba(0,0,0,0.15);
-  }
-
-  .button:hover{
-background:#1f3f35;
-transform:translateY(-2px);
-}
-  
-.button .icons {
+  width: 100%;
   display: flex;
-  gap: 8px;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.button a {
-  display: flex;
-}
+/* =========================
+   LOGO
+========================= */
 
-.button svg {
-  width: 22px;
-  height: 22px;
-  transition: transform 0.2s ease;
-}
-
-.button svg:hover {
-  transform: scale(1.15);
-}
-
-/* TRADUTTORE PULITO */
-
-#google_translate_element{
-margin-top:15px;
-text-align:center;
-}
-
-.goog-logo-link {
-display:none !important;
-}
-
-.goog-te-gadget span {
-display:none !important;
-}
-
-.goog-te-gadget {
-color:transparent !important;
-}
-
-.goog-te-gadget select{
-padding:6px 10px;
-border-radius:8px;
-border:none;
-font-size:14px;
-}
-
-/* PRENOTA SUBITO */
-
-.prenota-float{
-position:fixed;
-bottom:120px;
-right:20px;
-
-background:rgba(245, 101, 39, 0.8);
-color:white;
-padding:12px 16px;
-border-radius:30px;
-font-size:14px;
-text-decoration:none;
-
-box-shadow:0 4px 12px rgba(0,0,0,0.25);
-z-index:1000;
-
-/* animazioni */
-animation:
-fadeInUp 0.6s ease,
-pulseSoft 4s 1s infinite;
-
-transition:0.3s;
-}
-
-/* HOVER */
-.prenota-float:hover{
-background:#1f3f35;
-transform:translateY(-3px) scale(1.05);
-box-shadow:0 8px 18px rgba(0,0,0,0.35);
-
-/* ferma animazione */
-animation:none;
-}
-
-/* ENTRATA */
-@keyframes fadeInUp{
-from{
-opacity:0;
-transform:translateY(20px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
-/* PULSE */
-@keyframes pulseSoft {
-0%{
-transform:scale(1);
-box-shadow:0 4px 12px rgba(0,0,0,0.25);
-}
-50%{
-transform:scale(1.05);
-box-shadow:0 8px 20px rgba(0,0,0,0.35);
-}
-100%{
-transform:scale(1);
-box-shadow:0 4px 12px rgba(0,0,0,0.25);
-}
-}
-  
-  /* LOGO */
- .logo {
+.logo {
   width: 33%;
   max-width: 1536px;
-  height: auto;
-  object-fit: contain;
   display: block;
   margin: 0 auto;
 }
 
-/* MOBILE */
 @media (max-width: 768px) {
-  .logo {
-    width: 70%;
-  }
+  .logo { width: 70%; }
+}
+
+/* =========================
+   TRADUTTORE
+========================= */
+
+#google_translate_element {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.goog-logo-link,
+.goog-te-gadget span {
+  display: none !important;
+}
+
+.goog-te-gadget {
+  color: transparent !important;
+}
+
+.goog-te-gadget select {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: none;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+
+.container {
+  max-width: 800px;
+  margin: 2px auto;
+  padding: 30px 20px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+  background: rgba(255,255,255,0.88);
+  padding: 26px;
+  margin-bottom: 26px;
+
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+  backdrop-filter: blur(6px);
+
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(0,0,0,0.12);
+}
+
+/* =========================
+   FAQ
+========================= */
+
+.faq-item {
+  margin-bottom: 10px;
+  border-radius: 12px;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.faq-question {
+  background: #2f5d50;
+  color: white;
+  padding: 14px;
+  cursor: pointer;
+  font-weight: 500;
+
+  transition: 0.25s;
+}
+
+.faq-question:hover {
+  background: #1f3f35;
+}
+
+.faq-answer {
+  display: none;
+  padding: 14px;
+  background: #f9fbfd;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* =========================
+   CTA
+========================= */
+
+.cta {
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* =========================
+   BUTTON (UGUALE ALLA HOME)
+========================= */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  background: #2f5d50;
+  color: white;
+
+  padding: 13px 20px;
+  border-radius: 30px;
+
+  text-decoration: none;
+  font-weight: 500;
+  line-height: 1.2;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: 0.3s;
+}
+
+.button:hover {
+  background: #1f3f35;
+  transform: translateY(-2px);
+}
+
+.button.has-icon {
+  gap: 6px;
+  padding: 10px 14px;
+}
+
+/* =========================
+   SOCIAL
+========================= */
+
+.social-links {
+  display: flex;
+  gap: 8px;
+}
+
+.social-links svg {
+  width: 24px;
+  height: 24px;
+  display: block;
+  filter: drop-shadow(0 2px 3px rgba(0,0,0,0.2));
+  transition: transform 0.2s ease;
+}
+
+.social-links svg:hover {
+  transform: scale(1.12);
 }
 
 /* =========================
@@ -277,7 +260,6 @@ box-shadow:0 4px 12px rgba(0,0,0,0.25);
   width: 28px;
   height: 28px;
   fill: #f5f5f5;
-
   transition: 0.2s;
 }
 
@@ -287,82 +269,85 @@ box-shadow:0 4px 12px rgba(0,0,0,0.25);
 }
 
 /* =========================
-   SOCIAL LINKS
+   FLOAT CTA (ARANCIONE 👇)
 ========================= */
 
-.social-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
+.prenota-float {
+  position: fixed;
+  bottom: 107px;
+  right: 20px;
 
-  padding: 10px 14px;
+  background: rgba(245, 101, 39, 0.9); /* 👈 ARANCIONE mantenuto */
+  color: white;
+
+  padding: 12px 16px;
+  border-radius: 30px;
+  text-decoration: none;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  z-index: 1000;
+
+  animation: fadeInUp 0.6s ease, pulseSoft 4s 1s infinite;
 }
 
-.social-links {
-  display: flex;
-  gap: 8px; /* 👈 spazio tra icone */
+.prenota-float:hover {
+  background: #e5531d; /* 👈 arancione più scuro */
+  transform: translateY(-3px) scale(1.05);
+  animation: none;
 }
 
-.social-links svg {
-  width: 24px;
-  height: 24px;
-   display: block;
-  filter: drop-shadow(0 2px 3px rgba(0,0,0,0.2));
-  transition: transform 0.2s ease;
+/* =========================
+   ANIMAZIONI
+========================= */
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-.social-links svg:hover {
-  transform: scale(1.1);
-   transition: 0.2s;
+@keyframes pulseSoft {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
 }
 
-.social-button .text {
-  white-space: nowrap; /* 👈 evita che vada a capo */
-}
+/* =========================
+   FOOTER
+========================= */
 
-   .social-links a {
-  display: flex;
-  align-items: center;
-}
-
-/* LABEL */
-.contact-box .label {
-  font-size: 15px;
-  font-weight: 600; /* leggermente più importante */
+footer {
   text-align: center;
+  padding: 30px;
+  color: #777;
+  font-size: 14px;
+  line-height: 1.4;
 }
 
-/* ICONS CONTAINER */
-.icons {
-  display: flex;
-  gap: 14px;
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .container {
+    padding: 20px 16px;
+  }
+
+  .card {
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  .button {
+    width: 100%;
+    justify-content: center;
+    margin: 8px 0;
+  }
+
+  .logo {
+    width: 75%;
+  }
 }
 
-/* ICONE */
-.contact-box svg {
-  width: 28px;
-  height: 28px;
-
-  fill: #f5f5f5; /* 👈 icone chiare */
-
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-/* HOVER */
-.contact-box svg:hover {
-  transform: scale(1.15);
-  opacity: 0.85;
-}
-
-  /* FOOTER */
-
-footer{
-text-align:center;
-padding:30px;
-font-size:14px;
-color:#777;
-}
-  
 </style>
 
 </head>

@@ -229,7 +229,7 @@ header {
 }
 
 /* =========================
-   CONTACT BOX (UNIFICATO)
+   CONTACT BOX (UGUALE ALLA HOME)
 ========================= */
 
 .contact-box {
@@ -250,34 +250,31 @@ header {
 
   box-shadow: 0 6px 18px rgba(0,0,0,0.25);
   z-index: 1000;
-
-  backdrop-filter: blur(6px); /* 👈 mancava */
 }
 
-/* LABEL */
+/* TESTO */
 .contact-box .label {
   font-weight: 600;
-  font-size: 15px;
-  text-align: center;
 }
 
-/* ICONE */
-.contact-box .social-links {
-  display: flex;
-  gap: 10px;
-}
-
+/* ICONE (IDENTICHE ALLA HOME) */
 .contact-box svg {
   width: 28px;
   height: 28px;
   fill: #f5f5f5;
 
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  transition: 0.2s;
 }
 
 .contact-box svg:hover {
   transform: scale(1.15);
   opacity: 0.85;
+}
+
+/* CONTAINER ICONE */
+.contact-box .social-links {
+  display: flex;
+  gap: 8px;
 }
 
 /* =========================

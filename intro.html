@@ -25,27 +25,16 @@
 <link rel="icon" href="favicon.png" type="image/png">
 <style>
 
+/* =========================
+   BASE
+========================= */
+
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
+  color: #333;
+  font-size: 0.92em;
 
-  position: relative;
-  z-index: 0;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-
-  min-height: 100dvh;
-  text-align: center;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  
   background: linear-gradient(
     to bottom,
     #bcd8cc 0%,
@@ -54,167 +43,195 @@ body::before {
     #b8aea0 100%
   );
 
-  z-index: -1;
+  background-attachment: fixed;
+  -webkit-tap-highlight-color: transparent;
 }
 
-
-.container {
-  max-width: 60%;
-  margin: 40px auto;
-
-  background: rgba(255,255,255,0.95);
-  padding: 40px 30px;
-  border-radius: 20px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-  animation: fadeIn 0.6s ease;
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.5px;
 }
 
-@keyframes fadeIn{
-  from{opacity:0; transform:translateY(15px);}
-  to{opacity:1; transform:translateY(0);}
+h2 {
+  font-size: 1.4em;
+  text-align: center;
 }
 
-h1{
-  font-family:'Playfair Display', serif;
-  color:#2f5d50;
-  margin-bottom:10px;
-}
+/* =========================
+   HEADER
+========================= */
 
-p{
-  color:#555;
-  font-size:15px;
-  margin-bottom:25px;
-}
+header {
+  background:
+    linear-gradient(rgba(9, 9, 9, 1), rgba(20,40,35,0.55)),
+    url('header_transparent.png') center bottom/contain no-repeat;
 
-.icon{
-  font-size:50px;
-  margin-bottom:15px;
-}
-
-.button{
-  display:inline-block;
-  padding:12px 20px;
-  border-radius:30px;
-  background:#2f5d50;
-  color:white;
-  text-decoration:none;
-  transition:0.3s;
-}
-
-.button:hover{
-  background:#1f3f35;
-  transform:translateY(-2px);
-}
-
-  /* HEADER */
-
-header{
-background:
-linear-gradient(rgba(9, 9, 9, 1), rgba(20,40,35,0.55)),
-url('header_transparent.png') center bottom/contain no-repeat;
-
-width:100%;
-display:flex;
-flex-direction:column;
-justify-content:center;
-}
-
- /* BUTTON */
-
-.button {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: #2f5d50;
-  color: white;
-  padding: 12px 22px;
-  text-decoration:none;
-  border-radius:30px;
-  margin:6px 4px;
-  font-size:15px;
-  font-weight:500;
-  transition:0.3s;
-  box-shadow:0 4px 12px rgba(0,0,0,0.15);
-  }
-
-  .button:hover{
-background:#1f3f35;
-transform:translateY(-2px);
-}
-  
-.button .icons {
+  width: 100%;
   display: flex;
-  gap: 8px;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.button a {
-  display: flex;
-}
+/* =========================
+   LOGO
+========================= */
 
-.button svg {
-  width: 22px;
-  height: 22px;
-  transition: transform 0.2s ease;
-}
-
-.button svg:hover {
-  transform: scale(1.15);
-}
-  
-  /* LOGO */
- .logo {
+.logo {
   width: 33%;
   max-width: 1536px;
-  height: auto;
-  object-fit: contain;
   display: block;
   margin: 0 auto;
 }
 
-/* MOBILE */
 @media (max-width: 768px) {
-  .logo {
-    width: 70%;
-  }
+  .logo { width: 70%; }
 }
 
-  /* TRADUTTORE PULITO */
+/* =========================
+   TRADUTTORE
+========================= */
 
-#google_translate_element{
-margin-top:15px;
-text-align:center;
+#google_translate_element {
+  margin-top: 15px;
+  text-align: center;
 }
 
-.goog-logo-link {
-display:none !important;
-}
-
+.goog-logo-link,
 .goog-te-gadget span {
-display:none !important;
+  display: none !important;
 }
 
 .goog-te-gadget {
-color:transparent !important;
+  color: transparent !important;
 }
 
-.goog-te-gadget select{
-padding:6px 10px;
-border-radius:8px;
-border:none;
-font-size:14px;
-width: auto;
-display: inline-block;
+.goog-te-gadget select {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: none;
 }
 
-  /* FOOTER */
+/* =========================
+   LAYOUT
+========================= */
 
-footer{
-text-align:center;
-padding:30px;
-font-size:14px;
-color:#777;
+.container {
+  max-width: 1000px;
+  margin: 2px auto;
+  padding: 30px 20px;
 }
-  
+
+/* =========================
+   CARD (come home)
+========================= */
+
+.card {
+  background: rgba(255,255,255,0.88);
+  padding: 30px;
+  margin-bottom: 26px;
+
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+  backdrop-filter: blur(6px);
+
+  text-align: center;
+
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(0,0,0,0.12);
+}
+
+/* =========================
+   TESTO
+========================= */
+
+.card p {
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* =========================
+   BUTTON (coerente)
+========================= */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  background: #2f5d50;
+  color: white;
+
+  padding: 13px 20px;
+  border-radius: 30px;
+
+  text-decoration: none;
+  font-weight: 500;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: 0.3s;
+}
+
+.button:hover {
+  background: #1f3f35;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   FOOTER (full width)
+========================= */
+
+footer {
+  width: 100%;
+  text-align: center;
+
+  padding: 40px 20px;
+  margin-top: 40px;
+
+  color: #777;
+  font-size: 14px;
+  line-height: 1.5;
+
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(6px);
+
+  box-shadow: 0 -6px 20px rgba(0,0,0,0.05);
+}
+
+footer p {
+  max-width: 900px;
+  margin: 0 auto 10px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .container {
+    padding: 20px 16px;
+  }
+
+  .card {
+    padding: 22px;
+  }
+
+  .button {
+    width: 100%;
+    margin: 8px 0;
+  }
+
+  .logo {
+    width: 75%;
+  }
+}
+
 </style>
 
 </head>
@@ -231,21 +248,28 @@ color:#777;
   
 <div class="container">
 
-  <h2>👋 Hi! Thank you for contacting us.</h2>
+  <div class="card">
 
-  <p> We have received your inquiry. <br>
-    We will get back to you as soon as possible during our support hours (8:00 AM – 7:00 PM). <br><br>
+    <h2>👋 Hi! Thank you for contacting us.</h2>
 
-In the meantime, you can find more information here:<br>
-  <a class="button" href="https://guesthouse-bouceberio.github.io/website/" target="_blank">🌐 Website</a>
-  <a class="button" href="https://guesthouse-bouceberio.github.io/website/faq.html" target="_blank">❓ FAQs</a>
-<br><br>
+    <p>
+      We have received your inquiry. <br>
+      We will get back to you as soon as possible during our support hours (8:00 AM – 7:00 PM). <br><br>
 
-To help us assist you faster, please let us know: <br>
-📅 Your stay dates <br>
-👥 Number of guests <br><br>
+      In the meantime, you can find more information here:<br><br>
 
-Thank you, speak soon!
+      <a class="button" href="https://guesthouse-bouceberio.github.io/website/" target="_blank">🌐 Website</a>
+      <a class="button" href="https://guesthouse-bouceberio.github.io/website/faq.html" target="_blank">❓ FAQs</a>
+      <br><br>
+
+      To help us assist you faster, please let us know: <br>
+      📅 Your stay dates <br>
+      👥 Number of guests <br><br>
+
+      Thank you, speak soon!
+    </p>
+
+  </div>
 
 </div>
 

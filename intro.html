@@ -129,7 +129,7 @@ header {
   background: rgba(255,255,255,0.88);
   padding: 30px;
   margin-bottom: 26px;
-   width: 60%;
+   
   border-radius: 20px;
   box-shadow: 0 12px 35px rgba(0,0,0,0.08);
   backdrop-filter: blur(6px);
@@ -142,6 +142,17 @@ header {
 .card:hover {
   transform: translateY(-4px);
   box-shadow: 0 14px 32px rgba(0,0,0,0.12);
+}
+
+ .card.narrow {
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.card.narrow p {
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* =========================
@@ -244,7 +255,7 @@ footer p {
   
 <div class="container">
 
-  <div class="card">
+  <div class="card narrow">
 
     <h2>👋 Hi! Thank you for contacting us.</h2>
 
